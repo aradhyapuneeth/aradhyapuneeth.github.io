@@ -11,7 +11,9 @@
     <style>.profile-image{max-width:220px;width:100%;height:auto;box-shadow:0 10px 25px rgb(0 0 0 / .3);transition:transform 0.3s ease,box-shadow 0.3s ease;border:none;object-fit:contain;background-color:#fff0;padding:0;margin:0 auto;display:block;filter:brightness(1.05) contrast(1.05);max-height:none;aspect-ratio:auto}.profile-image:hover{transform:translateY(-5px);box-shadow:0 15px 35px rgb(83 160 253 / .3);filter:brightness(1.1) contrast(1.1)}.bg-glass{padding:25px;overflow:visible}
 @media (max-width:576px){.chat-input{padding:15px 12px}.chat-input input{padding:12px 15px;font-size:.9rem;max-width:calc(100% - 50px)}.chat-input button{width:40px;height:40px;min-width:40px;margin-left:10px;position:relative;right:0}.chat-input button i{font-size:.9rem}}@media (max-width:375px){.chat-popup{width:calc(100vw - 30px);right:-10px}.chat-input{padding:12px 10px}.chat-input input{padding:10px 12px}.chat-input button{width:36px;height:36px;min-width:36px;margin-left:8px}}
 @media screen and (device-width:360px) and (device-height:740px),screen and (device-width:412px) and (device-height:915px),screen and (device-width:393px) and (device-height:851px),screen and (max-width:414px) and (max-height:896px),screen and (max-width:428px) and (max-height:926px),screen and (max-width:390px) and (max-height:844px),screen and (max-width:375px) and (max-height:812px),screen and (max-width:360px) and (max-height:800px){.hero .container,.hero-text{padding-bottom:20px!important}.hero .row{flex-direction:column!important}.hero-img{margin-top:30px!important;padding-top:20px!important}.hero .btn{margin-bottom:10px!important}#home{padding-bottom:40px!important}.hero .container{overflow:visible!important}}@media (max-width:320px){.hero-text h1{font-size:1.8rem!important}.typed-container p{font-size:.9rem!important}.hero-text{padding-bottom:30px!important}.hero-img{margin-top:40px!important}}
-        </style>
+
+        .date-badge{position:absolute;top:15px;right:15px;background:#5271ff;color:#fff;padding:6px 16px;border-radius:20px;font-size:.9rem;font-weight:500;box-shadow:0 4px 10px rgba(82,113,255,.25);display:inline-flex;align-items:center;z-index:2}.date-badge i{margin-right:6px}.timeline-badge{display:none}.experience-content{padding-top:10px}.education-icon{width:60px;height:60px;min-width:60px;background:linear-gradient(135deg,#4776e6,#8e54e9);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin-right:20px;box-shadow:0 6px 15px rgba(71,118,230,.3);position:relative;overflow:hidden}.education-icon::before{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:rgba(255,255,255,.1);transform:rotate(45deg);z-index:1}.education-icon i{z-index:2;filter:drop-shadow(0 2px 3px rgba(0, 0, 0, .3))}
+    </style>
 </head>
 <body class="bg-space">
     
@@ -354,76 +356,53 @@
             </div>
         </div>
     </section>
-
-    <section id="experience" class="py-5 my-5">
-        <div class="container">
-            <div class="section-title text-center">
-                <h2>Work <span>Experience</span></h2>
-                <div class="line"></div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-10">
-                    <div class="experience-timeline">
-                        <div class="experience-item">
-                            <div class="experience-dot">
-                                <i class="fas fa-briefcase"></i>
-                            </div>
-                            <div class="experience-date">2020 - Present</div>
-                            <div class="experience-content">
-                                <h4 class="experience-title">Senior DevOps Engineer</h4>
-                                <p class="experience-company">Accenture</p>
-                                <p>Leading DevOps implementations for enterprise clients with focus on cloud migration, infrastructure automation, and CI/CD pipelines.</p>
-                                <div class="row mt-4">
-                                    <div class="col-md-6">
-                                        <ul class="text-secondary ps-3">
-                                            <li>Designed and implemented CI/CD pipelines for microservices architecture</li>
-                                            <li>Reduced deployment time by 70% through automation</li>
-                                            
-                                        </ul>
+            <section id="experience" class="py-5 my-5">
+                <div class="container">
+                    <div class="section-title text-center">
+                        <h2>Work <span>Experience</span></h2>
+                        <div class="line"></div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-lg-10">
+                            <div class="experience-timeline">
+                                <div class="experience-item">
+                                    <div class="experience-dot">
+                                        <i class="fas fa-briefcase"></i>
                                     </div>
-                                    <div class="col-md-6">
-                                        <ul class="text-secondary ps-3">
-                                            <li>Established monitoring using Splunk Enterprise</li>
-                                            <li>Led a team of 5 DevOps engineers</li>
-                                           
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="experience-item">
-                            <div class="experience-dot">
-                                <i class="fas fa-briefcase"></i>
-                            </div>
-                            <div class="experience-date">2015 - 2020</div>
-                            <div class="experience-content">
-                                <h4 class="experience-title">DevOps Engineer</h4>
-                                <p class="experience-company">Accenture</p>
-                                <p>Implemented DevOps practices and tools to streamline software delivery for financial sector clients.</p>
-                                <div class="row mt-4">
-                                    <div class="col-md-6">
-                                        <ul class="text-secondary ps-3">
-                                            <li>Migrated legacy applications to cloud environments</li>
-                                            <li>Developed automation scripts for deployment</li>
-                                            <li>Managed source code repositories and artifactory systems</li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <ul class="text-secondary ps-3">
-                                            <li>Implemented infrastructure as code using Terraform</li>
-                                            <li>Collaborated with development and testing teams</li>
-                                            <li>Built end-to-end CI/CD pipelines using Azure DevOps</li>
-                                        </ul>
+                                    <div class="experience-content position-relative">
+                                        <div class="date-badge">
+                                            <i class="fas fa-calendar-alt"></i>2015 - Present
+                                        </div>
+                                        <h4 class="experience-title">DevOps Engineer</h4>
+                                        <p class="experience-company">Accenture</p>
+                                        <p>Leading DevOps implementations for enterprise clients with focus on cloud migration, infrastructure automation, and CI/CD pipelines.</p>
+                                        <div class="row mt-4">
+                                            <div class="col-md-6">
+                                                <ul class="text-secondary ps-3">
+                                                    <li>Designed and implemented CI/CD pipelines for microservices</li>
+                                                    <li>Reduced deployment time by 70% through automation</li>
+                                                    <li>Migrated legacy applications to cloud environments</li>
+                                                    <li>Developed automation scripts for deployment</li>
+                                                    <li>Managed source code repositories and artifactory systems</li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <ul class="text-secondary ps-3">
+                                                    <li>Established monitoring using Splunk Enterprise</li>
+                                                    <li>Led a team of 5 DevOps engineers</li>
+                                                    <li>Implemented infrastructure as code using Terraform</li>
+                                                    <li>Collaborated with development and testing teams</li>
+                                                    <li>Built end-to-end CI/CD pipelines using Azure DevOps</li>
+                                                </ul>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
+            </section>
 
     
     <section id="awards" class="py-5 my-5">
@@ -435,7 +414,7 @@
             <div class="row g-4">
                 <div class="col-md-4">
                     <div class="award-card">
-                        <div class="award-year">2023</div>
+                        <div class="award-year" style="color: #27282b;">2020</div>
                         <div class="award-icon">
                             <i class="fas fa-trophy"></i>
                         </div>
@@ -445,7 +424,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="award-card">
-                        <div class="award-year">2022</div>
+                        <div class="award-year" style="color: #27282b;">2021</div>
                         <div class="award-icon">
                             <i class="fas fa-medal"></i>
                         </div>
@@ -455,7 +434,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="award-card">
-                        <div class="award-year">2021</div>
+                        <div class="award-year" style="color: #27282b;">2023</div>
                         <div class="award-icon">
                             <i class="fas fa-star"></i>
                         </div>
