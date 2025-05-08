@@ -1,1 +1,1 @@
-# aradhyapuneeth.github.io
+# puneeth-aradhya.github.io
