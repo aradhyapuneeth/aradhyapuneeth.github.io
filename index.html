@@ -179,7 +179,7 @@
                     <div class="hero-header">
                         <p class="hero-greeting">Hello, I'm</p>
                         <h1 class="hero-name">Puneeth Aradhya</h1>
-                        <p class="hero-title">Senior DevOps Engineer @ Accenture</p>
+                        <p class="hero-title">DevOps Engineer</p>
                         <p class="hero-tagline">Automating the universe, one deployment at a time 🚀</p>
                     </div>
                     <p class="footer-description">DevOps Engineer</p>
@@ -201,7 +201,7 @@
                                 </div>
                                 <h3>What I Do</h3>
                             </div>
-                            <p>DevOps Engineer at Accenture, delivering high-quality software solutions and automation tools for various clients across different domains.</p>
+                            <p>DevOps Engineer, delivering high-quality software solutions and automation tools for various clients across different domains.</p>
                         </div>
                         
                         <div class="hero-card">
@@ -217,7 +217,7 @@
                     
                     <div class="hero-buttons">
                         <a href="#contact" class="btn-sonar-primary">Let's Connect →</a>
-                        <a href="#" class="btn-sonar-secondary">Chat with AI 🤖</a>
+                        <a href="#" id="launchChatBtn" class="btn-sonar-secondary">Launch Chat 🤖</a>
                     </div>
                 </div>
             </div>
@@ -248,8 +248,8 @@
                         
                         <div class="profile-info">
                             <h3>Puneeth Aradhya</h3>
-                            <p class="profile-role">Senior DevOps Engineer</p>
-                            <p class="profile-company">Accenture</p>
+                            <p class="profile-role">DevOps Engineer</p>
+                            
                             
                             <div class="profile-location">
                                 <i class="fas fa-map-marker-alt"></i>
@@ -273,8 +273,8 @@
                 
                 <div class="about-details">
                     <div class="detail-card">
-                        <h4>DevOps Engineer at Accenture</h4>
-                        <p>I am a DevOps Engineer at Accenture, where I apply DevOps principles to deliver high-quality software solutions for various clients across different domains and industries. I collaborate with development, testing, and operations teams to ensure continuous integration, delivery, and deployment of software products and services.</p>
+                        <h4>DevOps Engineer</h4>
+                        <p>I am a DevOps Engineer, where I apply DevOps principles to deliver high-quality software solutions for various clients across different domains and industries. I collaborate with development, testing, and operations teams to ensure continuous integration, delivery, and deployment of software products and services.</p>
                         
                         <p>My contributions to automation have earned me multiple awards, such as the Accenture Celebrates Excellence Individual award and the pinNAcle Collaborator award. I have also developed and deployed several automation scripts and tools using IBM UrbanCode Deploy (uDeploy), Azure DevOps, and Splunk Enterprise. I leverage these skills to optimize the performance, reliability, and security of software systems and applications.</p>
                         
@@ -1784,7 +1784,7 @@
                     <a href="https://www.linkedin.com/in/puneeth-aradhya" target="_blank">
                         <i class="fab fa-linkedin-in"></i>
                     </a>
-                    <a href="#" target="_blank">
+                    <a href="https://github.com" target="_blank">
                         <i class="fab fa-github"></i>
                     </a>
                     <a href="https://devpost.com/aradhyapuneeth" target="_blank" rel="noopener">
@@ -1933,6 +1933,22 @@
       linkMap.forEach((_, section)=>obs.observe(section));
     })();
     </script>
+    <script>
+(function(){
+  const launcher = document.getElementById('launchChatBtn');
+  if(launcher){
+    launcher.addEventListener('click', function(e){
+      e.preventDefault();
+      const popup = document.getElementById('chatPopup');
+      const chatBtn = document.getElementById('chatBtn');
+      if(popup && chatBtn){
+        popup.classList.add('active');
+        chatBtn.classList.add('active');
+      }
+    });
+  }
+})();
+</script>
 </body>
 </html>
 
