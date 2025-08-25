@@ -93,6 +93,20 @@
         transform: scale(1.05) !important;
         box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3) !important;
     }
+   @media (max-width: 1366px) {
+    .chat-popup {
+        right: 16px;
+        bottom: 16px;
+        width: min(90vw, 490px);
+        height: min(85vh, 600px);
+    }
+}
+
+@media (max-height: 800px) {
+    .chat-popup {
+        height: calc(100vh - 120px);
+    }
+}
 </style>
 
 
@@ -2000,6 +2014,7 @@
 </script>
 </body>
 </html>
+
 
 
 
