@@ -44,6 +44,8 @@
     .font-mono-bold { font-family: "Berkeley Mono Bold", "Monaco", "Menlo", "Consolas", monospace; }
     :root { --font-family: "FK Grotesk Neue Regular", "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; }
     body.sonar-body { font-family: var(--font-family); }
+    body.sonar-body:has(.chat-popup.active) { overflow: auto !important; position: static !important; touch-action: auto !important; }
+    body.chat-open { overflow: auto !important; position: static !important; touch-action: auto !important; }
     @media (max-width: 768px) {
         .chat-popup {
             position: fixed !important;
@@ -69,6 +71,18 @@
         .chat-popup {
             height: auto !important;
             max-height: 600px !important;
+        }
+    }
+    @media (min-width: 1025px) and (max-height: 820px) {
+        .chat-popup {
+            position: fixed !important;
+            right: 24px !important;
+            left: auto !important;
+            top: 20px !important;
+            bottom: 20px !important;
+            height: auto !important;
+            max-height: calc(100vh - 40px) !important;
+            border-radius: 24px !important;
         }
     }
    
@@ -2027,5 +2041,3 @@
 </script>
 </body>
 </html>
-
-
