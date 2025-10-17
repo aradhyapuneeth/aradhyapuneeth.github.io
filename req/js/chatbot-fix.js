@@ -2,30 +2,22 @@
 function pingServer() {
     console.log('🔄 Pinging server to wake it up...');
     
-    // Try health check endpoint first, fall back to chat endpoint
-    fetch('https://puneeth-portfolio-asst-8c01c90c4c03.herokuapp.com/', {
-        method: 'GET',
-        mode: 'no-cors' // Allows request even if endpoint doesn't exist
+    fetch('https://puneeth-portfolio-asst-8c01c90c4c03.herokuapp.com/api/chat', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ message: 'hi' })
     })
-    .then(() => {
-        console.log('✅ Server ping sent (health check)');
+    .then(response => response.json())
+    .then(data => {
+        console.log('✅ Server response:', data);
+        if (data.reply) {
+            console.log('📨 Reply:', data.reply);
+        }
     })
-    .catch(() => {
-        // Fallback: try chat endpoint
-        fetch('https://puneeth-portfolio-asst-8c01c90c4c03.herokuapp.com/api/chat', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ message: 'ping' }),
-            mode: 'no-cors'
-        })
-        .then(() => {
-            console.log('✅ Server ping sent (chat endpoint)');
-        })
-        .catch(error => {
-            console.log('⚠️ Server ping error:', error);
-        });
+    .catch(error => {
+        console.log('⚠️ Server ping error:', error);
     });
 }
 
