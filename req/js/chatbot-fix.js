@@ -1,6 +1,7 @@
 // ===== PING SERVER ON PAGE LOAD =====
 function pingServer() {
     console.log('🔄 Pinging server to wake it up...');
+    console.log('📍 Target URL: https://puneeth-portfolio-asst-8c01c90c4c03.herokuapp.com/api/chat');
     
     fetch('https://puneeth-portfolio-asst-8c01c90c4c03.herokuapp.com/api/chat', {
         method: 'POST',
@@ -9,7 +10,10 @@ function pingServer() {
         },
         body: JSON.stringify({ message: 'hi' })
     })
-    .then(response => response.json())
+    .then(response => {
+        console.log('📥 Response received, status:', response.status);
+        return response.json();
+    })
     .then(data => {
         console.log('✅ Server response:', data);
         if (data.reply) {
@@ -17,9 +21,11 @@ function pingServer() {
         }
     })
     .catch(error => {
-        console.log('⚠️ Server ping error:', error);
+        console.error('⚠️ Server ping error:', error);
     });
 }
+
+console.log('✨ chatbot-fix.js loaded successfully');
 
 // ===== AI CHATBOT FUNCTIONALITY - CORRECTED =====
 function initializeChatbot() {
@@ -326,7 +332,10 @@ function hideTypingIndicator() {
 
 // Initialize when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
+    console.log('🚀 DOM loaded - starting initialization');
     // Ping server immediately when page loads to wake it up
+    console.log('📡 About to call pingServer()');
     pingServer();
+    console.log('🤖 About to call initializeChatbot()');
     initializeChatbot();
 });
