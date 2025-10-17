@@ -1,22 +1,31 @@
 // ===== PING SERVER ON PAGE LOAD =====
 function pingServer() {
     console.log('🔄 Pinging server to wake it up...');
-    fetch('https://puneeth-portfolio-asst-8c01c90c4c03.herokuapp.com/api/chat', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ message: 'ping' })
+    
+    // Try health check endpoint first, fall back to chat endpoint
+    fetch('https://puneeth-portfolio-asst-8c01c90c4c03.herokuapp.com/', {
+        method: 'GET',
+        mode: 'no-cors' // Allows request even if endpoint doesn't exist
     })
-    .then(response => {
-        if (response.ok) {
-            console.log('✅ Server is awake');
-        } else {
-            console.log('⚠️ Server ping failed:', response.status);
-        }
+    .then(() => {
+        console.log('✅ Server ping sent (health check)');
     })
-    .catch(error => {
-        console.log('⚠️ Server ping error:', error);
+    .catch(() => {
+        // Fallback: try chat endpoint
+        fetch('https://puneeth-portfolio-asst-8c01c90c4c03.herokuapp.com/api/chat', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ message: 'ping' }),
+            mode: 'no-cors'
+        })
+        .then(() => {
+            console.log('✅ Server ping sent (chat endpoint)');
+        })
+        .catch(error => {
+            console.log('⚠️ Server ping error:', error);
+        });
     });
 }
 
@@ -325,5 +334,7 @@ function hideTypingIndicator() {
 
 // Initialize when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
+    // Ping server immediately when page loads to wake it up
+    pingServer();
     initializeChatbot();
 });
