@@ -1,141 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Puneeth Aradhya | DevOps Engineer | Cloud Solutions & Automation Expert</title>
 <meta name="description" content="Puneeth Aradhya is a DevOps Engineer at Accenture specializing in cloud solutions, CI/CD pipelines, and automation. Expert in AWS, Azure DevOps, and infrastructure as code.">
 <meta name="keywords" content="DevOps Engineer, Cloud Solutions, Automation Expert, CI/CD Pipelines, Azure DevOps, AWS, Infrastructure as Code, Puneeth Aradhya, Accenture">
 <meta name="author" content="Puneeth Aradhya">
-
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#08090b">
+<meta http-equiv="Cache-Control" content="max-age=86400, public">
+<script>
+/* Theme boot — runs before first paint so there is no flash. */
+(function () {
+  var t = null;
+  try { t = localStorage.getItem('theme'); } catch (e) {}
+  if (t !== 'light' && t !== 'dark') {
+    t = window.matchMedia && matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+  }
+  document.documentElement.setAttribute('data-theme', t);
+})();
+</script>
+<meta property="og:type" content="website">
 <meta property="og:title" content="Puneeth Aradhya | DevOps Engineer">
 <meta property="og:description" content="DevOps Engineer specializing in cloud solutions, CI/CD pipelines, and automation">
 <meta property="og:url" content="https://aradhyapuneeth.github.io">
-<meta property="og:type" content="website">
-<meta http-equiv="Cache-Control" content="max-age=86400, public">
-<link rel="canonical" href="https://aradhyapuneeth.github.io">   
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    
-    
-    <link rel="preload" href="./req/fonts/BerkeleyMono-Bold.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="./req/fonts/BerkeleyMono-Regular.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="./req/fonts/FKGrotesk-Light.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="./req/fonts/FKGrotesk-Regular.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="./req/fonts/FKGroteskNeue-Light.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="./req/fonts/FKGroteskNeue-Regular.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="./req/fonts/FKGroteskNeue-Medium.woff2" as="font" type="font/woff2" crossorigin>
-    <link  rel="shortcut icon" href="req/img/fav/redketchup/favicon.ico">
-    <link  rel="shortcut icon" href="req/img/fav/redketchup/android-chrome-192x192.png">
-    <link rel="shortcut icon" href="req/img/fav/redketchup/android-chrome-512x512.png">
-    <link rel="shortcut icon" href="req/img/fav/redketchup/apple-touch-icon.png">
-    <script src="req/js/styles.js"></script>
-<style>
-    html, body { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility; }
-    body { font-family: "FK Grotesk Neue Regular", "FK Grotesk Regular", "FK Grotesk Neue Light", "FK Grotesk Light", "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; }
-    h1, h2, h3, h4, h5, h6 { font-family: "FK Grotesk Neue Medium", "FK Grotesk Neue Regular", "FK Grotesk Regular", "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; }
-    @media (max-width: 768px) { html { font-size: 16px; } }
-    img { image-rendering: -webkit-optimize-contrast; }
-    .font-light { font-family: "FK Grotesk Light", "Inter", system-ui, -apple-system, sans-serif; }
-    .font-neue { font-family: "FK Grotesk Neue Regular", "Inter", system-ui, -apple-system, sans-serif; }
-    .font-neue-light { font-family: "FK Grotesk Neue Light", "Inter", system-ui, -apple-system, sans-serif; }
-    .font-neue-medium { font-family: "FK Grotesk Neue Medium", "Inter", system-ui, -apple-system, sans-serif; }
-    .font-mono { font-family: "Berkeley Mono Regular", "Monaco", "Menlo", "Consolas", monospace; }
-    .font-mono-bold { font-family: "Berkeley Mono Bold", "Monaco", "Menlo", "Consolas", monospace; }
-    :root { --font-family: "FK Grotesk Neue Regular", "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; }
-    body.sonar-body { font-family: var(--font-family); }
-    body.sonar-body:has(.chat-popup.active) { overflow: auto !important; position: static !important; touch-action: auto !important; }
-    body.chat-open { overflow: auto !important; position: static !important; touch-action: auto !important; }
-    @media (max-width: 768px) {
-        .chat-popup {
-            position: fixed !important;
-            left: 0 !important;
-            right: 0 !important;
-            bottom: 0 !important;
-            top: 0 !important;
-            width: 100vw !important;
-            height: 100dvh !important;
-            border-radius: 0 !important;
-            z-index: 9999 !important;
-        }
-        body {
-            overflow-x: hidden !important;
-            width: 100% !important;
-        }
-        .container {
-            overflow-x: hidden !important;
-            max-width: 100% !important;
-        }
-    }
-    @media (min-width: 1025px) {
-        .chat-popup {
-            height: auto !important;
-            max-height: 600px !important;
-        }
-    }
-    @media (min-width: 1025px) and (max-height: 820px) {
-        .chat-popup {
-            position: fixed !important;
-            right: 24px !important;
-            left: auto !important;
-            top: 20px !important;
-            bottom: 20px !important;
-            height: auto !important;
-            max-height: calc(100vh - 40px) !important;
-            border-radius: 24px !important;
-        }
-    }
-   
-    .chat-input-container {
-        background: transparent !important;
-        border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
-        padding: 16px 20px !important;
-        margin: 0 -12px -12px -12px !important;
-    }
-    .input-wrapper {
-        background: rgba(255, 255, 255, 0.05) !important;
-        border: 1px solid rgba(255, 255, 255, 0.15) !important;
-        border-radius: 20px !important;
-        padding: 8px !important;
-        transition: all 0.2s ease !important;
-    }
-    .input-wrapper:focus-within {
-        border-color: var(--accent-blue) !important;
-        box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1) !important;
-        background: rgba(255, 255, 255, 0.08) !important;
-    }
-    .chat-input-container textarea {
-        background: transparent !important;
-        border: none !important;
-        color: #fff !important;
-        font-size: 14px !important;
-        line-height: 1.4 !important;
-        padding: 12px 16px !important;
-        resize: none !important;
-        min-height: 40px !important;
-        max-height: 120px !important;
-    }
-    .chat-input-container textarea::placeholder {
-        color: rgba(255, 255, 255, 0.6) !important;
-    }
-    .send-btn {
-        background: linear-gradient(135deg, var(--accent-blue) 0%, var(--accent-purple) 100%) !important;
-        border: none !important;
-        border-radius: 50% !important;
-        width: 36px !important;
-        height: 36px !important;
-        display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-        color: #fff !important;
-        transition: all 0.2s ease !important;
-    }
-    .send-btn:hover {
-        transform: scale(1.05) !important;
-        box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3) !important;
-    }
-</style>
+<meta property="og:site_name" content="Puneeth Aradhya">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://aradhyapuneeth.github.io/req/img/profile.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Puneeth Aradhya | DevOps Engineer">
+<meta name="twitter:description" content="DevOps Engineer specializing in cloud solutions, CI/CD pipelines, and automation">
+<meta name="twitter:image" content="https://aradhyapuneeth.github.io/req/img/profile.png">
+<link rel="canonical" href="https://aradhyapuneeth.github.io">
 
+<link rel="icon" href="req/img/fav/favicon.svg?v=2" type="image/svg+xml">
+<link rel="icon" href="req/img/fav/favicon.ico?v=2" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="req/img/fav/favicon-32x32.png?v=2">
+<link rel="icon" type="image/png" sizes="16x16" href="req/img/fav/favicon-16x16.png?v=2">
+<link rel="apple-touch-icon" href="req/img/fav/apple-touch-icon.png?v=2">
+<link rel="manifest" href="req/img/fav/site.webmanifest?v=2">
+
+<link rel="preload" href="req/fonts/space-grotesk-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="req/fonts/jetbrains-mono-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="req/css/styles.css">
 
         <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -157,1965 +65,563 @@
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WRRMZSD9"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Puneeth Aradhya",
+  "jobTitle": "Senior DevOps Engineer",
+  "url": "https://aradhyapuneeth.github.io",
+  "email": "mailto:aradhyapuneeth@gmail.com",
+  "image": "https://aradhyapuneeth.github.io/req/img/profile.png",
+  "address": { "@type": "PostalAddress", "addressLocality": "Mysuru", "addressRegion": "Karnataka", "addressCountry": "IN" },
+  "alumniOf": "Sri Jayachamarajendra College of Engineering",
+  "sameAs": ["https://www.linkedin.com/in/puneeth-aradhya"]
+}
+</script>
 </head>
-<body class="sonar-body">
-    <!-- Exact preloader from ref/preloader.html -->
-    <div class="sonar-loader-wrapper">
-        <div class="sonar-loader-container">
-            <!-- Animated Logo/Brand -->
-            <div class="loader-brand">
-                <div class="brand-circle">
-                    <span class="brand-text">PA</span>
-                    <div class="scanning-beam"></div>
-                </div>
-            </div>
+<body class="is-loading">
 
-            <!-- Dynamic Search Animation -->
-            <div class="search-animation">
-                <div class="search-bars">
-                    <div class="search-bar" style="--delay: 0s; --height: 60%"></div>
-                    <div class="search-bar" style="--delay: 0.1s; --height: 80%"></div>
-                    <div class="search-bar" style="--delay: 0.2s; --height: 100%"></div>
-                    <div class="search-bar" style="--delay: 0.3s; --height: 70%"></div>
-                    <div class="search-bar" style="--delay: 0.4s; --height: 90%"></div>
-                    <div class="search-bar" style="--delay: 0.5s; --height: 65%"></div>
-                    <div class="search-bar" style="--delay: 0.6s; --height: 85%"></div>
-                </div>
-                <div class="search-pulse"></div>
-            </div>
+<!-- ═══ Preloader · CI/CD deploy sequence ═══ -->
+<div class="preloader" id="preloader" role="status" aria-live="polite" aria-label="Loading">
+  <div class="preloader__glow"></div>
+  <div class="preloader__scan"></div>
+  <div class="boot">
+    <div class="boot__cmd"><span class="prompt">puneeth@prod</span> <span>:~$ deploy --env production --portfolio</span> <span class="caret"></span></div>
 
-            <!-- Loading Content -->
-            <div class="loader-text-content">
-                <h2 class="loader-name">Building Experience</h2>
-                <p class="loader-subtitle">Assembling DevOps Solutions</p>
+    <div class="pipeline" aria-hidden="true">
+      <div class="pipeline__track"><span class="pipeline__fill"></span></div>
 
-                <!-- Progress Indicators -->
-                <div class="loading-stages">
-                    <div class="stage active" data-stage="1">
-                        <div class="stage-dot"></div>
-                        <span>Initializing Cloud Infrastructure</span>
-                    </div>
-                    <div class="stage" data-stage="2">
-                        <div class="stage-dot"></div>
-                        <span>Loading DevOps Pipeline</span>
-                    </div>
-                    <div class="stage" data-stage="3">
-                        <div class="stage-dot"></div>
-                        <span>Deploying Portfolio</span>
-                    </div>
-                </div>
-
-                <!-- Modern Progress Bar -->
-                <div class="modern-progress">
-                    <div class="progress-track">
-                        <div class="progress-fill"></div>
-                        <div class="progress-glow"></div>
-                    </div>
-                    <span class="progress-percentage">0%</span>
-                </div>
-            </div>
-
-            <!-- Floating DevOps Icons -->
-            <div class="floating-tech-icons">
-                <div class="tech-icon" style="--delay: 0s; --x: 20%; --y: 30%">
-                    <i class="fa-brands fa-docker"></i>
-                </div>
-                <div class="tech-icon" style="--delay: 0.5s; --x: 80%; --y: 25%">
-                    <i class="fa-brands fa-aws"></i>
-                </div>
-                <div class="tech-icon" style="--delay: 1s; --x: 70%; --y: 70%">
-                    <i class="fa-solid fa-cloud"></i>
-                </div>
-                <div class="tech-icon" style="--delay: 1.5s; --x: 25%; --y: 75%">
-                    <i class="fa-brands fa-git-alt"></i>
-                </div>
-                <div class="tech-icon" style="--delay: 2s; --x: 90%; --y: 50%">
-                    <i class="fa-solid fa-robot"></i>
-                </div>
-            </div>
+      <div class="stage" data-stage="build">
+        <div class="stage__dot">
+          <svg class="default" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m8 3-6 9 6 9M16 3l6 9-6 9M14 3l-4 18"/></svg>
+          <span class="spin"></span>
+          <svg class="stage__check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
         </div>
+        <span class="stage__label">Build</span>
+      </div>
+
+      <div class="stage" data-stage="test">
+        <div class="stage__dot">
+          <svg class="default" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3v6l-5 9a2 2 0 0 0 1.8 3h12.4A2 2 0 0 0 20 18l-5-9V3M8 3h8M8 14h8"/></svg>
+          <span class="spin"></span>
+          <svg class="stage__check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+        </div>
+        <span class="stage__label">Test</span>
+      </div>
+
+      <div class="stage" data-stage="deploy">
+        <div class="stage__dot">
+          <svg class="default" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 16.5 3 3M9 15l-4.5 1.5M14 6l4 4M12.5 2.5 6 9l-2 5 5-2 6.5-6.5a3.5 3.5 0 0 0-3-3z"/><path d="M15 9a3.5 3.5 0 0 0-3-3"/></svg>
+          <span class="spin"></span>
+          <svg class="stage__check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+        </div>
+        <span class="stage__label">Deploy</span>
+      </div>
+
+      <div class="stage" data-stage="release">
+        <div class="stage__dot">
+          <svg class="default" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 3 7v10l9 5 9-5V7z"/><path d="m3 7 9 5 9-5M12 12v10"/></svg>
+          <span class="spin"></span>
+          <svg class="stage__check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+        </div>
+        <span class="stage__label">Release</span>
+      </div>
     </div>
 
-    <!-- Sonar Navigation -->
-    <nav class="sonar-nav">
-        <div class="container">
-            <div class="nav-content">
-                <a class="nav-brand" href="#home">
-                    <span class="brand-icon">PA</span>
-                    <span class="brand-name">Puneeth Aradhya</span>
-                </a>
-                  <div class="nav-menu" id="navMenu">
-                    <a class="nav-link active" href="#home">Home</a>
-                    <a class="nav-link" href="#about">About</a>
-                    <a class="nav-link" href="#skills">Skills</a>
-                    <a class="nav-link" href="#experience">Experience</a>
-                    <a class="nav-link" href="#awards">Awards</a>
-                    <a class="nav-link" href="#certifications">Certifications</a>
-                    <a class="nav-link" href="#contact">Contact</a>
-                </div>
-                
-                <button class="nav-toggle" id="navToggle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </div>
+    <div class="boot__foot">
+      <div class="boot__status"><span class="text-muted">›</span> initializing build environment<span class="text-muted">…</span></div>
+      <div class="boot__pct"><span class="n tnum">0</span><span class="s">%</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- Ambient backdrop -->
+<div class="backdrop" aria-hidden="true">
+  <div class="backdrop__grid"></div>
+  <div class="backdrop__glow"></div>
+  <div class="backdrop__grain"></div>
+</div>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- ═══ Navigation ═══ -->
+<header class="site-header" id="siteHeader">
+  <nav class="nav" id="nav" aria-label="Primary">
+    <a class="brand" href="#hero" aria-label="Puneeth Aradhya — home">
+      <span class="brand__mark">PA</span>
+      <span class="brand__name">Puneeth&nbsp;Aradhya <span class="role">— DevOps Engineer</span></span>
+    </a>
+    <div class="nav__links" id="navLinks">
+      <a class="nav__link is-active" href="#hero">Home</a>
+      <a class="nav__link" href="#about">About</a>
+      <a class="nav__link" href="#work">Work</a>
+      <a class="nav__link" href="#stack">Stack</a>
+      <a class="nav__link" href="#credentials">Proof</a>
+      <a class="nav__link" href="#contact">Contact</a>
+    </div>
+    <div class="nav__right">
+      <span class="nav__status" title="Local time · Mysuru (IST)">
+        <span class="live"></span>available
+        <span class="clock tnum" data-clock>00:00:00</span>
+      </span>
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to light theme" data-cursor="theme">
+        <svg class="tt-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+        <svg class="tt-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      </button>
+      <a class="btn btn--primary nav__cta magnetic" href="#contact" data-cursor="connect">Let's talk</a>
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<main id="main">
+
+<!-- ═══ Hero ═══ -->
+<section class="hero" id="hero">
+  <canvas class="hero__canvas" id="heroCanvas" aria-hidden="true"></canvas>
+
+  <div class="container">
+    <div class="hero__grid">
+      <div class="hero__intro">
+        <span class="eyebrow hero__eyebrow">DevOps &amp; Platform Engineer <span class="reg">&nbsp;· ap-south-1 / Mysuru</span></span>
+
+        <h1 class="hero__title" aria-label="Puneeth Aradhya">
+          <span class="line line--fill"><span data-decode="PUNEETH">PUNEETH</span></span>
+          <span class="line line--grad"><span data-decode="ARADHYA">ARADHYA</span><span class="blink" aria-hidden="true"></span></span>
+        </h1>
+
+        <p class="lead hero__lead">
+          I turn fragile, manual infrastructure into
+          <span class="em">secure, automated systems</span> teams ship on with confidence.
+        </p>
+
+        <div class="hero__actions">
+          <a class="btn btn--primary btn--lg magnetic" href="#contact" data-cursor="connect">
+            Let's connect
+            <svg class="btn__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a class="btn btn--ghost btn--lg" href="#work" data-cursor="open">
+            <svg class="btn__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+            View the work
+          </a>
         </div>
-    </nav>    <!-- Hero Section -->
-    <section id="home" class="sonar-hero">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-main">
-                    <div class="hero-header">
-                        <p class="hero-greeting">Hello, I'm</p>
-                        <h1 class="hero-name gradient-text">Puneeth Aradhya</h1>
-                        <p class="hero-title">DevOps Engineer</p>
-                    </div>
-                   
-                    <div class="hero-cards">
-                        <div class="hero-card">
-                            <div class="card-header">
-                                <div class="card-icon">
-                                    <i class="fas fa-user"></i>
-                                </div>
-                                <h3>About Me</h3>
-                            </div>
-                            <p>With 10+ years of experience in cloud infrastructure, CI/CD, and DevOps automation, I help organizations scale efficiently and deploy with confidence.</p>
-                        </div>
-                        
-                        <div class="hero-card">
-                            <div class="card-header">
-                                <div class="card-icon">
-                                    <i class="fas fa-star"></i>
-                                </div>
-                                <h3>What I Do</h3>
-                            </div>
-                            <p>DevOps Engineer, delivering high-quality software solutions and automation tools for various clients across different domains.</p>
-                        </div>
-                        
-                        <div class="hero-card">
-                            <div class="card-header">
-                                <div class="card-icon">
-                                    <i class="fas fa-heart"></i>
-                                </div>
-                                <h3>My Passion</h3>
-                            </div>
-                            <p>Passionate about learning new technologies and enhancing DevOps skills to provide innovative solutions for complex software challenges.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="hero-buttons">
-                        <a href="#contact" class="btn-sonar-primary">Let's Connect →</a>
-                        <a href="#" id="launchChatBtn" class="btn-sonar-primary">Launch Chat 🤖</a>
-                    </div>
-                </div>
-            </div>
+
+        <div class="status-strip" aria-label="Status">
+          <div class="stat">
+            <span class="stat__k">status</span>
+            <span class="stat__v live"><span class="dot"></span>operational</span>
+          </div>
+          <div class="stat">
+            <span class="stat__k">region</span>
+            <span class="stat__v">ap-south-1 · Mysuru</span>
+          </div>
+          <div class="stat">
+            <span class="stat__k">since</span>
+            <span class="stat__v">2015 · 10y+ uptime</span>
+          </div>
+          <div class="stat">
+            <span class="stat__k">local</span>
+            <span class="stat__v tnum" data-clock>00:00:00</span>
+          </div>
         </div>
-        
+      </div>
 
-    </section>    <!-- About Section -->
-    <section id="about" class="sonar-section">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-badge">
-                    <span>About Me</span>
-                </div>                <h2 class="section-title font-neue-medium">
-                    Meet your next<br>
-                    <span class="gradient-text">DevOps partner</span>
-                </h2>
-                <p class="section-subtitle font-light">
-                    10+ years of experience delivering scalable infrastructure<br>
-                    solutions that power modern applications.
-                </p>
-            </div>
-            
-            <div class="about-content">
-                <div class="about-main">                    <div class="profile-card">
-                        <div class="profile-image-container">
-                            <img src="req/img/ap.png" alt="Puneeth Aradhya" class="profile-image" loading="lazy">
-                        </div>
-                        
-                        <div class="profile-info">
-                            <h3>Puneeth Aradhya</h3>
-                            <p class="profile-role">DevOps Engineer</p>
-                            
-                            
-                            <div class="profile-location">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <span>Mysuru, India</span>
-                            </div>
-                            
-                            <div class="social-links">
-                                <a href="mailto:aradhyapuneeth@gmail.com" class="social-link">
-                                    <i class="fas fa-envelope"></i>
-                                </a>
-                                <a href="https://www.linkedin.com/in/puneeth-aradhya" target="_blank" class="social-link">
-                                    <i class="fab fa-linkedin-in"></i>
-                                </a>
-                                <a href="https://devpost.com/aradhyapuneeth" target="_blank" class="social-link">
-                                    <i class="fas fa-code"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="about-details">
-                    <div class="detail-card">
-                        <h4>DevOps Engineer</h4>
-                        <p>I am an experienced DevOps Engineer with a decade of expertise in implementing and scaling CI/CD solutions across enterprise environments. I specialize in architecting secure and efficient pipelines using Azure DevOps, Power Platform Build Tools, Jenkins, and GitHub, enabling organizations to achieve faster, more reliable software delivery.</p>
-                        
-                        <p>My work focuses on automation, infrastructure optimization, and security compliance. Over the years, I have successfully led DevOps transformations for Dynamics 365 CE and Power Platform environments, modernized CI/CD infrastructures, and contributed to audit-ready, cloud-native delivery ecosystems. My contributions to automation and collaboration have earned me multiple awards, including the Accenture Celebrates Excellence – Individual Award and the pinNAcle Collaborator Award.</p>
-                        
-                        <p>I hold a Bachelor of Engineering in Electrical and Electronics Engineering from Sri Jayachamarajendra College of Engineering, Mysore, and several certifications such as Microsoft Certified DevOps Engineer Expert and GitHub Foundations and GitHub Copilot. Passionate about continuous improvement, I enjoy exploring emerging DevOps tools, cloud technologies, and automation frameworks to deliver resilient and innovative software solutions.</p>
-                    </div>
-                    
-                    <div class="expertise-grid">
-                        <div class="expertise-item">
-                            <div class="expertise-icon">
-                                <i class="fas fa-code-branch"></i>
-                            </div>
-                            <div class="expertise-content">
-                                <h5>DevOps</h5>
-                                <span class="expertise-level">Expert Level</span>
-                            </div>
-                        </div>
-                        
-                        <div class="expertise-item">
-                            <div class="expertise-icon">
-                                <i class="fas fa-cloud"></i>
-                            </div>
-                            <div class="expertise-content">
-                                <h5>Cloud Solutions</h5>
-                                <span class="expertise-level">Advanced Level</span>
-                            </div>
-                        </div>
-                        
-                        <div class="expertise-item">
-                            <div class="expertise-icon">
-                                <i class="fas fa-cogs"></i>
-                            </div>
-                            <div class="expertise-content">
-                                <h5>Automation</h5>
-                                <span class="expertise-level">Expert Level</span>
-                            </div>
-                        </div>
-                        
-                        <div class="expertise-item">
-                            <div class="expertise-icon">
-                                <i class="fas fa-code"></i>
-                            </div>
-                            <div class="expertise-content">
-                                <h5>Scripting</h5>
-                                <span class="expertise-level">Advanced Level</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <!-- Git graph — a release, drawn live -->
+      <div class="hero__graph" aria-hidden="true">
+        <svg class="git" viewBox="0 0 420 560" fill="none">
+          <!-- lines -->
+          <path class="g-line g-main"   d="M150 20 V 540" pathLength="1"/>
+          <path class="g-line g-branch" d="M150 120 C 150 168, 300 156, 300 204 V 356 C 300 404, 150 392, 150 440" pathLength="1"/>
+
+          <!-- commits -->
+          <circle class="g-c g-c--main d1" cx="150" cy="60"  r="7" />
+          <circle class="g-c g-c--acc  d2" cx="150" cy="120" r="7" />
+          <circle class="g-c g-c--acc  d3" cx="300" cy="240" r="7" />
+          <circle class="g-c g-c--acc  d4" cx="300" cy="320" r="7" />
+          <circle class="g-c g-c--acc  d5" cx="150" cy="440" r="7" />
+          <circle class="g-c g-c--acc  d5" cx="150" cy="505" r="8" />
+          <circle class="g-ring" cx="150" cy="505" r="9" />
+
+          <!-- labels -->
+          <text class="g-t g-t--dim d1" x="130" y="64"  text-anchor="end">main</text>
+          <text class="g-t d2" x="130" y="124" text-anchor="end">checkout -b feat/ci</text>
+          <text class="g-t d3" x="320" y="244">+ pipeline.yml</text>
+          <text class="g-t g-t--acc d4" x="320" y="324">checks ✓ secure</text>
+          <text class="g-t d5" x="130" y="444" text-anchor="end">merge → main</text>
+
+          <!-- release tag -->
+          <g class="g-tag">
+            <rect x="174" y="491" width="142" height="28" rx="14"/>
+            <text x="245" y="509" text-anchor="middle">v2.0 · deployed</text>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <a class="scroll-cue" href="#about" aria-label="Scroll down" data-cursor="scroll">
+    <span class="txt">scroll</span>
+    <span class="rail"></span>
+  </a>
+</section>
+
+<!-- ═══ Marquee bridge ═══ -->
+<div class="marquee" aria-label="Core tooling">
+  <div class="marquee__track" id="marqueeTrack">
+    <span class="marquee__item"><span class="d"></span>AWS</span>
+    <span class="marquee__item"><span class="d"></span>Azure DevOps</span>
+    <span class="marquee__item"><span class="d"></span>GitHub Actions</span>
+    <span class="marquee__item"><span class="d"></span>Kubernetes</span>
+    <span class="marquee__item"><span class="d"></span>Docker</span>
+    <span class="marquee__item"><span class="d"></span>Terraform</span>
+    <span class="marquee__item"><span class="d"></span>Jenkins</span>
+    <span class="marquee__item"><span class="d"></span>Ansible</span>
+    <span class="marquee__item"><span class="d"></span>Splunk</span>
+    <span class="marquee__item"><span class="d"></span>Prometheus</span>
+    <span class="marquee__item"><span class="d"></span>Grafana</span>
+    <span class="marquee__item"><span class="d"></span>Power Platform</span>
+    <span class="marquee__item"><span class="d"></span>PowerShell</span>
+    <span class="marquee__item"><span class="d"></span>Python</span>
+  </div>
+</div>
+
+<!-- ═══ 01 · whoami ═══ -->
+<section class="section" id="about">
+  <div class="container">
+    <div class="about__grid">
+
+      <!-- identity card -->
+      <aside class="idcard" data-reveal="left">
+        <div class="idcard__head">
+          <span>identity.card</span>
+          <span class="on">verified</span>
         </div>
-    </section>    <!-- Skills Section -->
-    <section id="skills" class="sonar-section sonar-skills">
-        <div class="container">            <div class="section-header">
-                <div class="section-badge">
-                    <span>Technical Expertise</span>
-                </div>          
-                <p class="section-subtitle font-light">
-                    10+ years of DevOps experience across industry knowledge<br>
-                    and cutting-edge tools & technologies.
-                </p>
-            </div>
-              <!-- Industry Knowledge Skills Section -->
-            <div class="skills-section-header">
-                <h3 class="skills-category-title">
-                    <i class="fas fa-industry"></i>
-                    Industry Knowledge
-                </h3>
-            </div>
-            
-            <div class="skills-grid industry-skills">
-                <div class="skill-card">
-                    <div class="skill-header">
-                        <div class="skill-icon cicd">
-                            <i class="fas fa-sync-alt"></i>
-                        </div>
-                        <div class="skill-info">
-                            <h3>Continuous Integration & Continuous Delivery</h3>
-                            <p>Advanced CI/CD pipeline implementation with automated testing, deployment, and rollback strategies.</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="skill-card">
-                    <div class="skill-header">
-                        <div class="skill-icon ha">
-                            <i class="fas fa-shield-alt"></i>
-                        </div>
-                        <div class="skill-info">
-                            <h3>High Availability (HA)</h3>
-                            <p>Design and implement fault-tolerant systems with 99.9% uptime and disaster recovery capabilities.</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="skill-card">
-                    <div class="skill-header">
-                        <div class="skill-icon incident">
-                            <i class="fas fa-exclamation-triangle"></i>
-                        </div>
-                        <div class="skill-info">
-                            <h3>Incident Management</h3>
-                            <p>Rapid incident response, root cause analysis, and preventive measures implementation.</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="skill-card">
-                    <div class="skill-header">
-                        <div class="skill-icon automation">
-                            <i class="fas fa-robot"></i>
-                        </div>
-                        <div class="skill-info">
-                            <h3>Process Automation</h3>
-                            <p>End-to-end workflow automation reducing manual intervention by 85%.</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="skill-card">
-                    <div class="skill-header">
-                        <div class="skill-icon release">
-                            <i class="fas fa-shipping-fast"></i>
-                        </div>
-                        <div class="skill-info">
-                            <h3>Release Engineering</h3>
-                            <p>Streamlined release management with automated deployment pipelines and rollback capabilities.</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="skill-card">
-                    <div class="skill-header">
-                        <div class="skill-icon agile">
-                            <i class="fas fa-project-diagram"></i>
-                        </div>
-                        <div class="skill-info">
-                            <h3>Scaled Agile Framework</h3>
-                            <p>Implementation of SAFe practices for large-scale enterprise agile transformations.</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="skill-card">
-                    <div class="skill-header">
-                        <div class="skill-icon scrum">
-                            <i class="fas fa-users-cog"></i>
-                        </div>
-                        <div class="skill-info">
-                            <h3>Scrum & Agile Methodologies</h3>
-                            <p>Expert in Scrum framework implementation, sprint planning, and agile team facilitation.</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="skill-card">
-                    <div class="skill-header">
-                        <div class="skill-icon sonarqube">
-                            <i class="fas fa-bug"></i>
-                        </div>
-                        <div class="skill-info">
-                            <h3>SonarQube</h3>
-                            <p>Code quality analysis, security vulnerability detection, and technical debt management.</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="skill-card">
-                    <div class="skill-header">
-                        <div class="skill-icon team">
-                            <i class="fas fa-users"></i>
-                        </div>
-                        <div class="skill-info">
-                            <h3>Team Building & Leadership</h3>
-                            <p>Cross-functional team coordination and DevOps culture transformation.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Tools & Technologies Section -->
-            <div class="skills-section-header">
-                <h3 class="skills-category-title">
-                    <i class="fas fa-tools"></i>
-                    Tools & Technologies
-                </h3>
-            </div>
-            
-            <div class="skills-grid tools-skills">                <div class="skill-card primary-skill">
-                    <div class="skill-header">
-                        <div class="skill-icon aws">
-                            <i class="fab fa-aws"></i>
-                        </div>
-                        <div class="skill-info">
-                            <h3>Amazon Web Services (AWS)</h3>
-                            <p>Expert-level AWS cloud architecture, migration, and cost optimization strategies.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="skill-features">
-                        <div class="tech-tags">
-                            <span class="tech-tag">
-                                <i class="fas fa-server"></i>
-                                EC2
-                            </span>
-                            <span class="tech-tag">
-                                <i class="fas fa-database"></i>
-                                RDS
-                            </span>
-                            <span class="tech-tag">
-                                <i class="fas fa-hdd"></i>
-                                S3
-                            </span>
-                            <span class="tech-tag">
-                                <i class="fas fa-network-wired"></i>
-                                VPC
-                            </span>
-                            <span class="tech-tag">
-                                <i class="fas fa-code"></i>
-                                Lambda
-                            </span>
-                            <span class="tech-tag">
-                                <i class="fas fa-balance-scale"></i>
-                                ELB
-                            </span>
-                            <span class="tech-tag">
-                                <i class="fas fa-expand-arrows-alt"></i>
-                                Auto Scaling
-                            </span>
-                            <span class="tech-tag">
-                                <i class="fas fa-eye"></i>
-                                CloudWatch
-                            </span>
-                            <span class="tech-tag">
-                                <i class="fas fa-cloud"></i>
-                                CloudFormation
-                            </span>
-                            <span class="tech-tag">
-                                <i class="fas fa-route"></i>
-                                Route 53
-                            </span>
-                            <span class="tech-tag">
-                                <i class="fas fa-shipping-fast"></i>
-                                CloudFront
-                            </span>
-                            <span class="tech-tag">
-                                <i class="fas fa-key"></i>
-                                IAM
-                            </span>
-                        </div>
-                    </div>
-                </div>
-                  <div class="skill-card">
-                    <div class="skill-header">
-                        <div class="skill-icon azure">
-                            <i class="fab fa-microsoft"></i>
-                        </div>
-                        <div class="skill-info">
-                            <h3>Azure DevOps & Cloud</h3>
-                            <p>Comprehensive Azure DevOps implementation for enterprise-level CI/CD workflows.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="skill-features">
-                        <div class="tech-tags">
-                            <span class="tech-tag">
-                                <i class="fas fa-code-branch"></i>
-                                Azure Repos
-                            </span>
-                            <span class="tech-tag">
-                                <i class="fas fa-tasks"></i>
-                                Azure Pipelines
-                            </span>
-                            <span class="tech-tag">
-                                <i class="fas fa-clipboard-list"></i>
-                                Azure Boards
-                            </span>
-                            <span class="tech-tag">
-                                <i class="fas fa-box"></i>
-                                Azure Artifacts
-                            </span>
-                            <span class="tech-tag">
-                                <i class="fas fa-server"></i>
-                                Azure VMs
-                            </span>
-                            <span class="tech-tag">
-                                <i class="fas fa-database"></i>
-                                Azure SQL
-                            </span>
-                            <span class="tech-tag">
-                                <i class="fas fa-dharmachakra"></i>
-                                AKS
-                            </span>
-                            <span class="tech-tag">
-                                <i class="fas fa-eye"></i>
-                                Azure Monitor
-                            </span>
-                        </div>
-                    </div>
-                </div>
-                  <div class="skill-card">
-                    <div class="skill-header">
-                        <div class="skill-icon github">
-                            <i class="fab fa-github"></i>
-                        </div>
-                        <div class="skill-info">
-                            <h3>GitHub & Version Control</h3>
-                            <p>Advanced Git workflows, GitHub Actions, and collaborative development practices.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="skill-features">
-                        <div class="tech-tags">
-                            <span class="tech-tag">
-                                <i class="fab fa-git-alt"></i>
-                                Git
-                            </span>
-                            <span class="tech-tag">
-                                <i class="fas fa-robot"></i>
-                                GitHub Actions
-                            </span>
-                            <span class="tech-tag">
-                                <i class="fas fa-code-branch"></i>
-                                Branch Policies
-                            </span>
-                            <span class="tech-tag">
-                                <i class="fas fa-shield-alt"></i>
-                                Security Scanning
-                            </span>
-                            <span class="tech-tag">
-                                <i class="fas fa-users"></i>
-                                Collaborative Workflows
-                            </span>
-                        </div>
-                    </div>
-                </div>
-                  <div class="skill-card">
-                    <div class="skill-header">
-                        <div class="skill-icon jenkins">
-                            <i class="fas fa-hammer"></i>
-                        </div>
-                        <div class="skill-info">
-                            <h3>Jenkins & CI/CD Tools</h3>
-                            <p>Enterprise Jenkins implementation with pipeline as code and distributed builds.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="skill-features">
-                        <div class="tech-tags">
-                            <span class="tech-tag">
-                                <i class="fas fa-code"></i>
-                                Pipeline as Code
-                            </span>
-                            <span class="tech-tag">
-                                <i class="fas fa-plug"></i>
-                                Plugins
-                            </span>
-                            <span class="tech-tag">
-                                <i class="fas fa-network-wired"></i>
-                                Distributed Builds
-                            </span>
-                            <span class="tech-tag">
-                                <i class="fas fa-shield-alt"></i>
-                                Security Integration
-                            </span>
-                            <span class="tech-tag">
-                                <i class="fas fa-bell"></i>
-                                Notifications
-                            </span>
-                        </div>
-                    </div>
-                </div>
-                  <div class="skill-card">
-                    <div class="skill-header">
-                        <div class="skill-icon docker">
-                            <i class="fab fa-docker"></i>
-                        </div>
-                        <div class="skill-info">
-                            <h3>Docker & Containerization</h3>
-                            <p>Container orchestration, multi-stage builds, and security best practices.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="skill-features">
-                        <div class="tech-tags">
-                            <span class="tech-tag">
-                                <i class="fab fa-docker"></i>
-                                Docker
-                            </span>
-                            <span class="tech-tag">
-                                <i class="fas fa-layer-group"></i>
-                                Multi-stage Builds
-                            </span>
-                            <span class="tech-tag">
-                                <i class="fas fa-warehouse"></i>
-                                Docker Registry
-                            </span>
-                            <span class="tech-tag">
-                                <i class="fas fa-network-wired"></i>
-                                Docker Compose
-                            </span>
-                            <span class="tech-tag">
-                                <i class="fas fa-shield-alt"></i>
-                                Container Security
-                            </span>
-                        </div>
-                    </div>
-                </div>
-                  <div class="skill-card">
-                    <div class="skill-header">
-                        <div class="skill-icon kubernetes">
-                            <i class="fas fa-dharmachakra"></i>
-                        </div>
-                        <div class="skill-info">
-                            <h3>Kubernetes & Orchestration</h3>
-                            <p>Production-grade Kubernetes cluster management, networking, and security.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="skill-features">
-                        <div class="tech-tags">
-                            <span class="tech-tag">
-                                <i class="fas fa-dharmachakra"></i>
-                                K8s Clusters
-                            </span>
-                            <span class="tech-tag">
-                                <i class="fas fa-helmet-safety"></i>
-                                Helm Charts
-                            </span>
-                            <span class="tech-tag">
-                                <i class="fas fa-network-wired"></i>
-                                Service Mesh
-                            </span>
-                            <span class="tech-tag">
-                                <i class="fas fa-eye"></i>
-                                Monitoring
-                            </span>
-                            <span class="tech-tag">
-                                <i class="fas fa-shield-alt"></i>
-                                RBAC
-                            </span>
-                            <span class="tech-tag">
-                                <i class="fas fa-expand-arrows-alt"></i>
-                                Auto-scaling
-                            </span>
-                        </div>
-                    </div>
-                </div>
-                  <div class="skill-card">
-                    <div class="skill-header">
-                        <div class="skill-icon splunk">
-                            <i class="fas fa-chart-bar"></i>
-                        </div>
-                        <div class="skill-info">
-                            <h3>Splunk Enterprise</h3>
-                            <p>Advanced log analysis, monitoring dashboards, and real-time alerting systems.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="skill-features">
-                        <div class="tech-tags">
-                            <span class="tech-tag">
-                                <i class="fas fa-search"></i>
-                                Log Analysis
-                            </span>
-                            <span class="tech-tag">
-                                <i class="fas fa-chart-line"></i>
-                                Dashboards
-                            </span>
-                            <span class="tech-tag">
-                                <i class="fas fa-bell"></i>
-                                Real-time Alerts
-                            </span>
-                            <span class="tech-tag">
-                                <i class="fas fa-database"></i>
-                                Data Indexing
-                            </span>
-                            <span class="tech-tag">
-                                <i class="fas fa-code"></i>
-                                SPL Queries
-                            </span>
-                        </div>
-                    </div>
-                </div>
-                  <div class="skill-card">
-                    <div class="skill-header">
-                        <div class="skill-icon terraform">
-                            <i class="fas fa-layer-group"></i>
-                        </div>
-                        <div class="skill-info">
-                            <h3>Infrastructure as Code</h3>
-                            <p>Terraform, CloudFormation, and ARM templates for automated infrastructure provisioning.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="skill-features">
-                        <div class="tech-tags">
-                            <span class="tech-tag">
-                                <i class="fas fa-cube"></i>
-                                Terraform
-                            </span>
-                            <span class="tech-tag">
-                                <i class="fas fa-cloud"></i>
-                                CloudFormation
-                            </span>
-                            <span class="tech-tag">
-                                <i class="fas fa-file-code"></i>
-                                ARM Templates
-                            </span>
-                            <span class="tech-tag">
-                                <i class="fab fa-ansible"></i>
-                                Ansible
-                            </span>
-                            <span class="tech-tag">
-                                <i class="fas fa-cogs"></i>
-                                Puppet
-                            </span>
-                            <span class="tech-tag">
-                                <i class="fas fa-code-branch"></i>
-                                Version Control
-                            </span>
-                        </div>
-                    </div>
-                </div>
-                  <div class="skill-card">
-                    <div class="skill-header">
-                        <div class="skill-icon mulesoft">
-                            <i class="fas fa-plug"></i>
-                        </div>
-                        <div class="skill-info">
-                            <h3>MuleSoft Integration Platform</h3>
-                            <p>API management, integration patterns, and enterprise service bus implementations.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="skill-features">
-                        <div class="tech-tags">
-                            <span class="tech-tag">
-                                <i class="fas fa-exchange-alt"></i>
-                                Anypoint Platform
-                            </span>
-                            <span class="tech-tag">
-                                <i class="fas fa-plug"></i>
-                                API Gateway
-                            </span>
-                            <span class="tech-tag">
-                                <i class="fas fa-cogs"></i>
-                                DataWeave
-                            </span>
-                            <span class="tech-tag">
-                                <i class="fas fa-project-diagram"></i>
-                                ESB Patterns
-                            </span>
-                            <span class="tech-tag">
-                                <i class="fas fa-shield-alt"></i>
-                                API Security
-                            </span>
-                        </div>
-                    </div>
-                </div>                <div class="skill-card">
-                    <div class="skill-header">
-                        <div class="skill-icon pcf">
-                            <i class="fas fa-cloud-upload-alt"></i>
-                        </div>
-                        <div class="skill-info">
-                            <h3>Pivotal Cloud Foundry</h3>
-                            <p>Cloud-native application deployment and management on PCF platform.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="skill-features">
-                        <div class="tech-tags">
-                            <span class="tech-tag">
-                                <i class="fas fa-cloud"></i>
-                                Cloud Native
-                            </span>
-                            <span class="tech-tag">
-                                <i class="fas fa-cube"></i>
-                                Buildpacks
-                            </span>
-                            <span class="tech-tag">
-                                <i class="fas fa-network-wired"></i>
-                                Service Mesh
-                            </span>
-                            <span class="tech-tag">
-                                <i class="fas fa-expand-arrows-alt"></i>
-                                Auto-scaling
-                            </span>
-                            <span class="tech-tag">
-                                <i class="fas fa-shield-alt"></i>
-                                Security Groups
-                            </span>
-                        </div>
-                    </div>
-                </div>
-                  <div class="skill-card">
-                    <div class="skill-header">
-                        <div class="skill-icon windows">
-                            <i class="fab fa-windows"></i>
-                        </div>
-                        <div class="skill-info">
-                            <h3>Windows Server & PowerShell</h3>
-                            <p>Windows Server administration, Active Directory, and PowerShell automation.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="skill-features">
-                        <div class="tech-tags">
-                            <span class="tech-tag">
-                                <i class="fab fa-windows"></i>
-                                Windows Server
-                            </span>
-                            <span class="tech-tag">
-                                <i class="fas fa-users-cog"></i>
-                                Active Directory
-                            </span>
-                            <span class="tech-tag">
-                                <i class="fas fa-terminal"></i>
-                                PowerShell
-                            </span>
-                            <span class="tech-tag">
-                                <i class="fas fa-cloud"></i>
-                                Azure AD
-                            </span>
-                            <span class="tech-tag">
-                                <i class="fas fa-server"></i>
-                                IIS
-                            </span>
-                        </div>
-                    </div>
-                </div>
-                  <div class="skill-card">
-                    <div class="skill-header">
-                        <div class="skill-icon ibm">
-                            <i class="fas fa-server"></i>
-                        </div>
-                        <div class="skill-info">
-                            <h3>IBM UrbanCode Deploy (uDeploy)</h3>
-                            <p>Enterprise deployment automation and application release management.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="skill-features">
-                        <div class="tech-tags">
-                            <span class="tech-tag">
-                                <i class="fas fa-rocket"></i>
-                                uDeploy
-                            </span>
-                            <span class="tech-tag">
-                                <i class="fas fa-project-diagram"></i>
-                                Deployment Pipelines
-                            </span>
-                            <span class="tech-tag">
-                                <i class="fas fa-server"></i>
-                                Agent Management
-                            </span>
-                            <span class="tech-tag">
-                                <i class="fas fa-code-branch"></i>
-                                Release Automation
-                            </span>
-                            <span class="tech-tag">
-                                <i class="fas fa-shield-alt"></i>
-                                Environment Mgmt
-                            </span>
-                        </div>
-                    </div>
-                </div>
-                  <div class="skill-card">
-                    <div class="skill-header">
-                        <div class="skill-icon ca">
-                            <i class="fas fa-calendar-alt"></i>
-                        </div>
-                        <div class="skill-info">
-                            <h3>CA Workload Automation AE</h3>
-                            <p>Enterprise job scheduling and workload automation solutions.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="skill-features">
-                        <div class="tech-tags">
-                            <span class="tech-tag">
-                                <i class="fas fa-clock"></i>
-                                Job Scheduling
-                            </span>
-                            <span class="tech-tag">
-                                <i class="fas fa-project-diagram"></i>
-                                Workflow Automation
-                            </span>
-                            <span class="tech-tag">
-                                <i class="fas fa-bell"></i>
-                                Event Management
-                            </span>
-                            <span class="tech-tag">
-                                <i class="fas fa-chart-line"></i>
-                                Monitoring
-                            </span>
-                            <span class="tech-tag">
-                                <i class="fas fa-server"></i>
-                                Enterprise Scale
-                            </span>
-                        </div>
-                    </div>
-                </div>
-                  <div class="skill-card">
-                    <div class="skill-header">
-                        <div class="skill-icon dynamics">
-                            <i class="fas fa-chart-pie"></i>
-                        </div>
-                        <div class="skill-info">
-                            <h3>Microsoft Dynamics 365</h3>
-                            <p>Business application integration and enterprise resource planning.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="skill-features">
-                        <div class="tech-tags">
-                            <span class="tech-tag">
-                                <i class="fas fa-users"></i>
-                                Customer Service
-                            </span>
-                            <span class="tech-tag">
-                                <i class="fas fa-chart-line"></i>
-                                Sales
-                            </span>
-                            <span class="tech-tag">
-                                <i class="fas fa-bullhorn"></i>
-                                Marketing
-                            </span>
-                            <span class="tech-tag">
-                                <i class="fas fa-cogs"></i>
-                                Field Service
-                            </span>
-                            <span class="tech-tag">
-                                <i class="fas fa-plug"></i>
-                                Integration
-                            </span>
-                        </div>
-                    </div>
-                </div>
-                  <div class="skill-card">
-                    <div class="skill-header">
-                        <div class="skill-icon power">
-                            <i class="fas fa-bolt"></i>
-                        </div>
-                        <div class="skill-info">
-                            <h3>Microsoft Power Platform</h3>
-                            <p>Low-code/no-code solutions using Power Apps, Power Automate, and Power BI.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="skill-features">
-                        <div class="tech-tags">
-                            <span class="tech-tag">
-                                <i class="fas fa-mobile-alt"></i>
-                                Power Apps
-                            </span>
-                            <span class="tech-tag">
-                                <i class="fas fa-robot"></i>
-                                Power Automate
-                            </span>
-                            <span class="tech-tag">
-                                <i class="fas fa-chart-bar"></i>
-                                Power BI
-                            </span>
-                            <span class="tech-tag">
-                                <i class="fas fa-comments"></i>
-                                Power Virtual Agents
-                            </span>
-                            <span class="tech-tag">
-                                <i class="fas fa-plug"></i>
-                                Connectors
-                            </span>
-                        </div>
-                    </div>
-                </div>
-                  <div class="skill-card">
-                    <div class="skill-header">
-                        <div class="skill-icon api">
-                            <i class="fas fa-exchange-alt"></i>
-                        </div>
-                        <div class="skill-info">
-                            <h3>REST API Development</h3>
-                            <p>API design, development, testing, and integration across microservices architecture.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="skill-features">
-                        <div class="tech-tags">
-                            <span class="tech-tag">
-                                <i class="fas fa-exchange-alt"></i>
-                                REST APIs
-                            </span>
-                            <span class="tech-tag">
-                                <i class="fas fa-cogs"></i>
-                                GraphQL
-                            </span>
-                            <span class="tech-tag">
-                                <i class="fas fa-file-alt"></i>
-                                OpenAPI/Swagger
-                            </span>
-                            <span class="tech-tag">
-                                <i class="fas fa-vial"></i>
-                                Postman
-                            </span>
-                            <span class="tech-tag">
-                                <i class="fas fa-cube"></i>
-                                Microservices
-                            </span>
-                        </div>
-                    </div>
-                </div>                <div class="skill-card">
-                    <div class="skill-header">
-                        <div class="skill-icon subversion">
-                            <i class="fas fa-code-branch"></i>
-                        </div>
-                        <div class="skill-info">
-                            <h3>Subversion (SVN)</h3>
-                            <p>Version control system management and repository administration.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="skill-features">
-                        <div class="tech-tags">
-                            <span class="tech-tag">
-                                <i class="fas fa-code-branch"></i>
-                                Version Control
-                            </span>
-                            <span class="tech-tag">
-                                <i class="fas fa-database"></i>
-                                Repository Admin
-                            </span>
-                            <span class="tech-tag">
-                                <i class="fas fa-users"></i>
-                                Branch Management
-                            </span>
-                            <span class="tech-tag">
-                                <i class="fas fa-history"></i>
-                                Revision History
-                            </span>
-                            <span class="tech-tag">
-                                <i class="fas fa-merge"></i>
-                                Merge Conflicts
-                            </span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Monitoring & Observability -->
-                <div class="skill-card primary-skill">
-                    <div class="skill-header">
-                        <div class="skill-icon monitoring">
-                            <i class="fas fa-chart-line"></i>
-                        </div>
-                        <div class="skill-info">
-                            <h3>Monitoring & Observability</h3>
-                            <p>Comprehensive monitoring solutions, alerting systems, and performance analytics.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="skill-features">
-                        <div class="tech-tags">
-                            <span class="tech-tag">
-                                <i class="fas fa-fire"></i>
-                                Prometheus
-                            </span>
-                            <span class="tech-tag">
-                                <i class="fas fa-chart-area"></i>
-                                Grafana
-                            </span>
-                            <span class="tech-tag">
-                                <i class="fas fa-search"></i>
-                                ELK Stack
-                            </span>
-                            <span class="tech-tag">
-                                <i class="fas fa-bell"></i>
-                                AlertManager
-                            </span>
-                            <span class="tech-tag">
-                                <i class="fas fa-tachometer-alt"></i>
-                                New Relic
-                            </span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Security & Compliance -->
-                <div class="skill-card primary-skill">
-                    <div class="skill-header">
-                        <div class="skill-icon security">
-                            <i class="fas fa-shield-alt"></i>
-                        </div>
-                        <div class="skill-info">
-                            <h3>Security & Compliance</h3>
-                            <p>Enterprise security frameworks, vulnerability management, and compliance automation.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="skill-features">
-                        <div class="tech-tags">
-                            <span class="tech-tag">
-                                <i class="fas fa-lock"></i>
-                                OWASP
-                            </span>
-                            <span class="tech-tag">
-                                <i class="fas fa-bug"></i>
-                                Snyk
-                            </span>
-                            <span class="tech-tag">
-                                <i class="fas fa-vault"></i>
-                                HashiCorp Vault
-                            </span>
-                            <span class="tech-tag">
-                                <i class="fas fa-certificate"></i>
-                                SSL/TLS
-                            </span>
-                            <span class="tech-tag">
-                                <i class="fas fa-id-card"></i>
-                                OAuth/SAML
-                            </span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Automation & Scripting -->
-                <div class="skill-card primary-skill">
-                    <div class="skill-header">
-                        <div class="skill-icon automation">
-                            <i class="fas fa-robot"></i>
-                        </div>
-                        <div class="skill-info">
-                            <h3>Automation & Scripting</h3>
-                            <p>Infrastructure automation, deployment scripts, and process orchestration.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="skill-features">
-                        <div class="tech-tags">
-                            <span class="tech-tag">
-                                <i class="fas fa-terminal"></i>
-                                PowerShell
-                            </span>
-                            <span class="tech-tag">
-                                <i class="fas fa-code"></i>
-                                Bash/Shell
-                            </span>
-                            <span class="tech-tag">
-                                <i class="fab fa-python"></i>
-                                Python
-                            </span>
-                            <span class="tech-tag">
-                                <i class="fas fa-file-code"></i>
-                                YAML/JSON
-                            </span>
-                            <span class="tech-tag">
-                                <i class="fas fa-exchange-alt"></i>
-                                REST APIs
-                            </span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Database Technologies -->
-                <div class="skill-card primary-skill">
-                    <div class="skill-header">
-                        <div class="skill-icon database">
-                            <i class="fas fa-database"></i>
-                        </div>
-                        <div class="skill-info">
-                            <h3>Database Technologies</h3>
-                            <p>Database administration, performance optimization, and data management solutions.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="skill-features">
-                        <div class="tech-tags">
-                            <span class="tech-tag">
-                                <i class="fas fa-fish"></i>
-                                MySQL
-                            </span>
-                            <span class="tech-tag">
-                                <i class="fas fa-elephant"></i>
-                                PostgreSQL
-                            </span>
-                            <span class="tech-tag">
-                                <i class="fas fa-server"></i>
-                                SQL Server
-                            </span>
-                            <span class="tech-tag">
-                                <i class="fas fa-leaf"></i>
-                                MongoDB
-                            </span>
-                            <span class="tech-tag">
-                                <i class="fas fa-memory"></i>
-                                Redis
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+        <div class="idcard__photo">
+          <img src="req/img/profile-canyon.png" alt="Puneeth Aradhya" width="900" height="920" loading="lazy">
+          <span class="idcard__scan"></span>
         </div>
-    </section>    <!-- Experience Section -->
-    <section id="experience" class="sonar-section">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-badge">
-                    <span>Work Experience</span>
-                </div>
-                <h2 class="section-title">
-                    Building the future<br>
-                    <span class="gradient-text">one deployment at a time</span>
-                </h2>
-                <p class="section-subtitle">
-                    10+ years of transforming infrastructure and enabling<br>
-                    teams to ship better software faster.
-                </p>
-            </div>
-            
-            <div class="experience-content">
-                <!-- New: LTIMindtree -->
-                <div class="experience-card">
-                    <div class="experience-header">
-                        <div class="company-icon">
-                            <img src="https://approvalinbox.ltimindtree.com/Assets/LTIMindtreeLoader.gif" alt="LTIMindtree logo" class="company-logo" width="48" height="48" loading="lazy">
-                        </div>
-                        <div class="experience-info">
-                            <h3>Senior Specialist - Software Engineer</h3>
-                            <p class="company-name">LTIMindtree</p>
-                            <p class="experience-duration">Dec 2025 - Present</p>
-                        </div>
-                    </div>
-
-                    <div class="experience-description">
-                        <p>Leading DevSecOps enablement using GitHub Actions and complementary tooling to design and operate secure, scalable CI/CD pipelines. Implementing automated security and compliance checks and integrating Infrastructure-as-Code to standardize deployments, improve reproducibility, and minimize manual intervention.</p>
-                    </div>
-
-                    <div class="achievements-grid">
-                        <div class="achievement-card">
-                            <div class="achievement-icon">
-                                <i class="fab fa-github"></i>
-                            </div>
-                            <div class="achievement-content">
-                                <h4>GitHub Actions</h4>
-                                <p>Secure CI/CD pipelines</p>
-                            </div>
-                        </div>
-
-                        <div class="achievement-card">
-                            <div class="achievement-icon">
-                                <i class="fas fa-shield-alt"></i>
-                            </div>
-                            <div class="achievement-content">
-                                <h4>DevSecOps</h4>
-                                <p>Security automation</p>
-                            </div>
-                        </div>
-
-                        <div class="achievement-card">
-                            <div class="achievement-icon">
-                                <i class="fas fa-robot"></i>
-                            </div>
-                            <div class="achievement-content">
-                                <h4>Automation</h4>
-                                <p>Workflows & scripts</p>
-                            </div>
-                        </div>
-
-                        <div class="achievement-card">
-                            <div class="achievement-icon">
-                                <i class="fas fa-code-branch"></i>
-                            </div>
-                            <div class="achievement-content">
-                                <h4>IaC</h4>
-                                <p>Terraform & templates</p>
-                            </div>
-                        </div>
-
-                        <div class="achievement-card">
-                            <div class="achievement-icon">
-                                <i class="fas fa-search"></i>
-                            </div>
-                            <div class="achievement-content">
-                                <h4>Observability</h4>
-                                <p>Monitoring & alerts</p>
-                            </div>
-                        </div>
-
-                        <div class="achievement-card">
-                            <div class="achievement-icon">
-                                <i class="fas fa-users"></i>
-                            </div>
-                            <div class="achievement-content">
-                                <h4>Collaboration</h4>
-                                <p>Cross-team enablement</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Existing: Accenture -->
-                <div class="experience-card">
-                    <div class="experience-header">
-                        <div class="company-icon">
-                            <img src="https://media.tenor.com/8V1FeK1IYiUAAAAM/accenture.gif" alt="Accenture logo" class="company-logo" width="48" height="48" loading="lazy">
-                        </div>
-                        <div class="experience-info">
-                            <h3>DevOps Engineer</h3>
-                            <p class="company-name">Accenture</p>
-                            <p class="experience-duration">Jun 2015 - Sep 2025</p>
-                        </div>
-                        <!-- <div class="experience-badge">
-                            <span>Previous</span>
-                        </div> -->
-                    </div>
-                    
-                    <div class="experience-description">
-                        <p>Led DevOps implementations for enterprise clients with focus on cloud migration, infrastructure automation, and CI/CD pipelines. Driving digital transformation initiatives that reduce operational overhead and improve system reliability.</p>
-                    </div>
-                    
-                    <div class="achievements-grid">
-                        <div class="achievement-card">
-                            <div class="achievement-icon">
-                                <i class="fas fa-rocket"></i>
-                            </div>
-                            <div class="achievement-content">
-                                <h4>CI/CD</h4>
-                                <p>Pipeline automation</p>
-                            </div>
-                        </div>
-                        
-                        <div class="achievement-card">
-                            <div class="achievement-icon">
-                                <i class="fas fa-cloud"></i>
-                            </div>
-                            <div class="achievement-content">
-                                <h4>Cloud</h4>
-                                <p>Migration & setup</p>
-                            </div>
-                        </div>
-                        
-                        <div class="achievement-card">
-                            <div class="achievement-icon">
-                                <i class="fas fa-cogs"></i>
-                            </div>
-                            <div class="achievement-content">
-                                <h4>Automation</h4>
-                                <p>Scripts & tools</p>
-                            </div>
-                        </div>
-                        
-                        <div class="achievement-card">
-                            <div class="achievement-icon">
-                                <i class="fas fa-chart-line"></i>
-                            </div>
-                            <div class="achievement-content">
-                                <h4>Monitoring</h4>
-                                <p>Performance tracking</p>
-                            </div>
-                        </div>
-                        
-                        <div class="achievement-card">
-                            <div class="achievement-icon">
-                                <i class="fas fa-users"></i>
-                            </div>
-                            <div class="achievement-content">
-                                <h4>Leadership</h4>
-                                <p>Team management</p>
-                            </div>
-                        </div>
-                        
-                        <div class="achievement-card">
-                            <div class="achievement-icon">
-                                <i class="fas fa-code-branch"></i>
-                            </div>
-                            <div class="achievement-content">
-                                <h4>IaC</h4>
-                                <p>Infrastructure as code</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="idcard__meta">
+          <div class="idcard__row"><span class="k">uid</span><span class="v">puneeth-aradhya</span></div>
+          <div class="idcard__row"><span class="k">role</span><span class="v">sr. devops engineer</span></div>
+          <div class="idcard__row"><span class="k">base</span><span class="v">12.2958° N · 76.6394° E</span></div>
+          <div class="idcard__row"><span class="k">tz</span><span class="v">IST · UTC+05:30</span></div>
+          <div class="idcard__row"><span class="k">exp</span><span class="v">10y+ · since 2015</span></div>
+          <div class="idcard__row"><span class="k">status</span><span class="v acc">● open to opportunities</span></div>
         </div>
-    </section>    <!-- Awards Section -->
-    <section id="awards" class="sonar-section">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-badge">
-                    <span>Recognition</span>
-                </div>
-                <h2 class="section-title">
-                    Awards and<br>
-                    <span class="gradient-text">achievements</span>
-                </h2>
-                <p class="section-subtitle">
-                    Recognition for excellence in automation,<br>
-                    collaboration, and knowledge sharing.
-                </p>
-            </div>
-            
-            <div class="awards-grid">
-                <div class="award-card">
-                    <div class="award-year-bg">2020</div>
-                    <div class="award-icon">
-                        <i class="fas fa-trophy"></i>
-                    </div>
-                    <div class="award-content">
-                        <h3>Accenture Celebrates Excellence</h3>
-                        <p>Recognized for exceptional contributions to automation initiatives that significantly improved client deployment processes and reduced manual intervention by 85%.</p>
-                    </div>
-                    <div class="award-badge">
-                        <span>Individual Award</span>
-                    </div>
-                </div>
-                
-                <div class="award-card">
-                    <div class="award-year-bg">2021</div>
-                    <div class="award-icon">
-                        <i class="fas fa-medal"></i>
-                    </div>
-                    <div class="award-content">
-                        <h3>pinNAcle Collaborator Award</h3>
-                        <p>Honored for demonstrating outstanding collaboration skills while working with cross-functional teams to implement innovative DevOps solutions across multiple projects.</p>
-                    </div>
-                    <div class="award-badge">
-                        <span>Collaboration Excellence</span>
-                    </div>
-                </div>
-                
-                <div class="award-card">
-                    <div class="award-year-bg">2023</div>
-                    <div class="award-icon">
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <div class="award-content">
-                        <h3>Shared Success Catalyst Award</h3>
-                        <p>Recognized for creating a knowledge-sharing platform that enabled teams across regions to leverage best practices and accelerate DevOps adoption throughout the organization.</p>
-                    </div>
-                    <div class="award-badge">
-                        <span>Innovation Leader</span>
-                    </div>
-                </div>
-            </div>
-        </div>    </section>
+      </aside>
 
-    <!-- Licenses and Certifications Section -->
-    <section id="certifications" class="sonar-section">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-badge">
-                    <span>Credentials</span>
-                </div>
-                <h2 class="section-title">
-                    Licenses and<br>
-                    <span class="gradient-text">certifications</span>
-                </h2>
-                <p class="section-subtitle">
-                    Professional certifications validating expertise<br>
-                    in cloud platforms and DevOps practices.
-                </p>
-            </div>              <div class="certifications-grid">
-                <!-- GitHub Copilot -->
-                <div class="certification-card">
-                    <div class="cert-header">
-                        <div class="cert-icon github">
-                            <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" width="32" height="32" loading="lazy">
-                        </div>
-                        <div class="cert-badge verified">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Verified</span>
-                        </div>
-                    </div>
-                    <div class="cert-content">
-                        <h3>GitHub Copilot</h3>
-                        <p class="cert-issuer">GitHub</p>
-                        <div class="cert-details">
-                            <span class="cert-date">
-                                <i class="fas fa-calendar"></i>
-                                Issued: Jun 2025
-                            </span>
-                            <span class="cert-expiry">
-                                <i class="fas fa-calendar-times"></i>
-                                Expires: Jun 2028
-                            </span>
-                        </div>
-                        <div class="cert-skills">
-                            <strong>Skills:</strong> GitHub Copilot - GitHub
-                        </div>
-                        <a href="https://www.credly.com/badges/10395d56-1daf-4bf1-b781-26445abe637e/linked_in_profile" class="show-credential-btn" target="_blank" rel="noopener">
-                            <i class="fas fa-external-link-alt"></i>
-                            Show credential
-                        </a>
-                    </div>
-                </div>
-
-                <!-- GitHub Foundations -->
-                <div class="certification-card">
-                    <div class="cert-header">
-                        <div class="cert-icon github">
-                            <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" width="32" height="32" loading="lazy">
-                        </div>
-                        <div class="cert-badge verified">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Verified</span>
-                        </div>
-                    </div>
-                    <div class="cert-content">
-                        <h3>GitHub Foundations</h3>
-                        <p class="cert-issuer">GitHub</p>
-                        <div class="cert-details">
-                            <span class="cert-date">
-                                <i class="fas fa-calendar"></i>
-                                Issued: Jun 2025
-                            </span>
-                            <span class="cert-expiry">
-                                <i class="fas fa-calendar-times"></i>
-                                Expires: Jun 2028
-                            </span>
-                        </div>
-                        <div class="cert-skills">
-                            <strong>Skills:</strong> GitHub
-                        </div>
-                        <a href="https://www.credly.com/badges/84d92406-9ed6-46bf-b4e0-f07a10deb88d/linked_in_profile" class="show-credential-btn" target="_blank" rel="noopener">
-                            <i class="fas fa-external-link-alt"></i>
-                            Show credential
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Harness Certified Continuous Delivery & GitOps Developer -->
-                <div class="certification-card">
-                    <div class="cert-header">
-                        <div class="cert-icon harness">
-                            <img src="https://cdn.prod.website-files.com/6400f5db669916305f63913b/65978df86f19659f0e97dc00_64ca923f0f66730472bac004_Screen%2520Shot%25202023-08-02%2520at%252010.28.16%2520AM.png" alt="Harness" width="32" height="32" loading="lazy">
-                        </div>
-                        <div class="cert-badge verified">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Verified</span>
-                        </div>
-                    </div>
-                    <div class="cert-content">
-                        <h3>Harness Certified Continuous Delivery & GitOps Developer</h3>
-                        <p class="cert-issuer">Harness</p>
-                        <div class="cert-details">
-                            <span class="cert-date">
-                                <i class="fas fa-calendar"></i>
-                                Issued: Jun 2025
-                            </span>
-                        </div>
-                        <a href="https://www.credly.com/badges/091dfc79-d02a-4817-aa98-5690bf2738ac/linked_in_profile" class="show-credential-btn" target="_blank" rel="noopener">
-                            <i class="fas fa-external-link-alt"></i>
-                            Show credential
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Microsoft Certified: Azure Developer Associate -->
-                <div class="certification-card">
-                    <div class="cert-header">
-                        <div class="cert-icon microsoft">
-                            <img src="https://img.icons8.com/color/96/microsoft.png" alt="Microsoft" width="32" height="32" loading="lazy">
-                        </div>
-                        <div class="cert-badge verified">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Verified</span>
-                        </div>
-                    </div>
-                    <div class="cert-content">
-                        <h3>Microsoft Certified: Azure Developer Associate</h3>
-                        <p class="cert-issuer">Microsoft</p>
-                        <div class="cert-details">
-                            <span class="cert-date">
-                                <i class="fas fa-calendar"></i>
-                                Issued: Jun 2025
-                            </span>
-                            <span class="cert-expiry">
-                                <i class="fas fa-calendar-times"></i>
-                                Expires: Jun 2027
-                            </span>
-                        </div>
-                        <div class="cert-skills">
-                            <strong>Skills:</strong> Microsoft Azure
-                        </div>
-                        <a href="https://learn.microsoft.com/api/credentials/share/en-us/PuneethAradhya-6002/BB5EE1E1108B674E?sharingId" class="show-credential-btn" target="_blank" rel="noopener">
-                            <i class="fas fa-external-link-alt"></i>
-                            Show credential
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Microsoft Certified: DevOps Engineer Expert -->
-                <div class="certification-card">
-                    <div class="cert-header">
-                        <div class="cert-icon microsoft">
-                            <img src="https://img.icons8.com/color/96/microsoft.png" alt="Microsoft" width="32" height="32" loading="lazy">
-                        </div>
-                        <div class="cert-badge verified">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Verified</span>
-                        </div>
-                    </div>
-                    <div class="cert-content">
-                        <h3>Microsoft Certified: DevOps Engineer Expert</h3>
-                        <p class="cert-issuer">Microsoft</p>
-                        <div class="cert-details">
-                            <span class="cert-date">
-                                <i class="fas fa-calendar"></i>
-                                Issued: Jun 2025
-                            </span>
-                            <span class="cert-expiry">
-                                <i class="fas fa-calendar-times"></i>
-                                Expires: Jun 2027
-                            </span>
-                        </div>
-                        <div class="cert-skills">
-                            <strong>Skills:</strong> Azure DevOps, Microsoft Azure
-                        </div>
-                        <a href="https://learn.microsoft.com/api/credentials/share/en-us/PuneethAradhya-6002/ED2CB021D00396F2?sharingId" class="show-credential-btn" target="_blank" rel="noopener">
-                            <i class="fas fa-external-link-alt"></i>
-                            Show credential
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Neo4j Certified Professional -->
-                <div class="certification-card">
-                    <div class="cert-header">
-                        <div class="cert-icon neo4j">
-                            <img src="https://miro.medium.com/v2/resize:fit:860/1*dbXVrszMTRob9qYMUY2lqg.png" alt="Neo4j" width="32" height="32" loading="lazy">
-                        </div>
-                        <div class="cert-badge verified">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Verified</span>
-                        </div>
-                    </div>
-                    <div class="cert-content">
-                        <h3>Neo4j Certified Professional</h3>
-                        <p class="cert-issuer">Neo4j</p>
-                        <div class="cert-details">
-                            <span class="cert-date">
-                                <i class="fas fa-calendar"></i>
-                                Issued: Jun 2025
-                            </span>
-                        </div>
-                        <a href="https://graphacademy.neo4j.com/c/d453634b-d0a8-4a65-aecd-596ea13e7fce/" class="show-credential-btn" target="_blank" rel="noopener">
-                            <i class="fas fa-external-link-alt"></i>
-                            Show credential
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Microsoft Certified: Azure Fundamentals -->
-                <div class="certification-card">
-                    <div class="cert-header">
-                        <div class="cert-icon microsoft">
-                            <img src="https://img.icons8.com/color/96/microsoft.png" alt="Microsoft" width="32" height="32" loading="lazy">
-                        </div>
-                        <div class="cert-badge verified">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Verified</span>
-                        </div>
-                    </div>
-                    <div class="cert-content">
-                        <h3>Microsoft Certified: Azure Fundamentals</h3>
-                        <p class="cert-issuer">Microsoft</p>
-                        <div class="cert-details">
-                            <span class="cert-date">
-                                <i class="fas fa-calendar"></i>
-                                Issued: Aug 2020
-                            </span>
-                        </div>
-                        <div class="cert-skills">
-                            <strong>Skills:</strong> Microsoft Azure
-                        </div>
-                        <a href="https://www.credly.com/badges/ba770513-e7ee-424c-8fbf-b5b1f257fdaf/linked_in_profile" class="show-credential-btn" target="_blank" rel="noopener">
-                            <i class="fas fa-external-link-alt"></i>
-                            Show credential
-                        </a>
-                    </div>
-                </div>
-            </div>
+      <!-- manifesto -->
+      <div class="about__body">
+        <div class="section-head">
+          <span class="eyebrow" data-reveal><span class="idx">01</span> — whoami</span>
+          <h2 data-reveal>Reliability is a feature.<br>I build it in.</h2>
         </div>
-    </section>
+        <p class="lead-big" data-reveal>
+          Ten years making release day a non-event:
+          <span class="dim">pipelines that just run, deploys nobody fears.</span>
+        </p>
+        <p data-reveal>
+          I architect <span class="hl">secure, efficient CI/CD</span> with Azure DevOps, Power
+          Platform Build Tools, Jenkins and GitHub, leading DevOps transformations for
+          Dynamics 365 CE and Power Platform estates at enterprise scale, from Accenture
+          to LTIMindtree.
+        </p>
+        <p data-reveal>
+          The throughline: <span class="hl">automate the repetitive, secure the risky,
+          document the rest.</span> Work recognized with the Accenture Celebrates
+          Excellence and pinNAcle Collaborator awards.
+        </p>
 
-    <!-- Education Section -->
-    <section id="education" class="sonar-section">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-badge">
-                    <span>Education</span>
-                </div>
-                <h2 class="section-title">
-                    Academic<br>
-                    <span class="gradient-text">foundation</span>
-                </h2>
-            </div>
-            
-            <div class="education-content">
-                <div class="education-card">
-                    <div class="education-icon">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-                    <div class="education-info">
-                        <h3>Bachelor of Engineering</h3>
-                        <h4>Electrical and Electronics Engineering</h4>
-                        <p class="education-institution">Sri Jayachamarajendra College of Engineering, Mysore</p>
-                        <p class="education-duration">2011 - 2015</p>
-                        <p class="education-description">Studied the fundamentals of software engineering, programming, and electrical circuits, establishing a strong technical foundation that supports my current role in DevOps engineering.</p>
-                    </div>
-                </div>
-            </div>
+        <div class="ops-principles" data-stagger>
+          <article class="principle">
+            <span class="principle__n">01</span>
+            <h3>Release calm</h3>
+            <p>Design pipelines so deploy day feels routine, observable, and reversible.</p>
+          </article>
+          <article class="principle">
+            <span class="principle__n">02</span>
+            <h3>Automate toil</h3>
+            <p>Move repeated manual work into tested scripts, templates, and guardrails.</p>
+          </article>
+          <article class="principle">
+            <span class="principle__n">03</span>
+            <h3>Secure by default</h3>
+            <p>Keep quality gates, secrets discipline, and compliance checks inside the path.</p>
+          </article>
         </div>
-    </section>    <!-- Contact Section -->
-    <section id="contact" class="sonar-section sonar-contact">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-badge">
-                    <span>Let's Connect</span>
-                </div>
-                <h2 class="section-title">
-                    Ready to build<br>
-                    <span class="gradient-text">something amazing?</span>
-                </h2>
-                <p class="section-subtitle">
-                    Let's discuss how my DevOps expertise can<br>
-                    accelerate your next project.
-                </p>
-            </div>
-            
-            <div class="contact-grid">
-                <div class="contact-card">
-                    <div class="contact-icon">
-                        <i class="fas fa-envelope"></i>
-                    </div>
-                    <div class="contact-content">
-                        <h3>Email</h3>
-                        <a href="mailto:aradhyapuneeth@gmail.com" class="contact-action">
-                            <i class="fas fa-envelope"></i>
-                            <span>Send Email</span>
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="contact-card">
-                    <div class="contact-icon">
-                        <i class="fab fa-linkedin-in"></i>
-                    </div>
-                    <div class="contact-content">
-                        <h3>LinkedIn</h3>
-                        <a href="https://www.linkedin.com/in/puneeth-aradhya" target="_blank" class="contact-action">
-                            <i class="fab fa-linkedin-in"></i>
-                            <span>Connect on LinkedIn</span>
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="contact-card">
-                    <div class="contact-icon">
-                        <i class="fas fa-map-marker-alt"></i>
-                    </div>
-                    <div class="contact-content">
-                        <h3>Location</h3>
-                        <a href="https://www.google.com/maps?q=Mysuru,Karnataka,India" target="_blank" class="contact-action">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>View on Map</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 02 · Work — release log ═══ -->
+<section class="section" id="work">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow" data-reveal><span class="idx">02</span> — git log --career</span>
+      <h2 data-reveal>Deployment history.</h2>
+    </div>
+
+    <div class="timeline" data-reveal>
+      <article class="release" data-reveal>
+        <div class="release__aside">
+          <span class="release__tag">release/2025.12 — HEAD</span>
+          <h3 class="release__co">LTIMindtree</h3>
+          <p class="release__period">Dec 2025 → present</p>
         </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="sonar-footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-main">
-                    <div class="footer-brand">
-                        <span class="brand-icon">PA</span>
-                        <span class="brand-name">Puneeth Aradhya</span>
-                    </div>
-                    <div class="footer-role">DevOps Engineer</div>
-                </div>
-                
-                <div class="footer-social">
-                    <a href="mailto:aradhyapuneeth@gmail.com" target="_blank">
-                        <i class="fas fa-envelope"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/puneeth-aradhya" target="_blank">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                    <a href="https://devpost.com/aradhyapuneeth" target="_blank" rel="noopener">
-                        <i class="fas fa-code"></i>
-                    </a>
-                </div>
-            </div>
-            
-            <div class="footer-bottom"></div>
+        <div class="release__main">
+          <h4 class="release__role">Senior Specialist · Software Engineer <span class="now">now</span></h4>
+          <p class="release__sum">
+            Leading <span class="hl">DevSecOps enablement with GitHub Actions</span>: designing and
+            operating secure, scalable CI/CD pipelines. Automated security &amp; compliance checks
+            and Infrastructure-as-Code standardize deployments, improve reproducibility and
+            minimize manual intervention.
+          </p>
+          <div class="release__chips" data-stagger>
+            <span class="kchip"><span class="d"></span>GitHub Actions</span>
+            <span class="kchip"><span class="d"></span>DevSecOps</span>
+            <span class="kchip"><span class="d"></span>IaC · Terraform</span>
+            <span class="kchip"><span class="d"></span>Security automation</span>
+            <span class="kchip"><span class="d"></span>Observability</span>
+            <span class="kchip"><span class="d"></span>Cross-team enablement</span>
+          </div>
         </div>
-    </footer>    <!-- Advanced AI Chatbot -->
-    <div class="ai-chatbot">
-        <!-- Floating Chat Button -->
-        <button class="chat-btn" id="chatBtn">            <div class="chat-btn-icon">
-                <svg class="chat-icon active" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 0 1-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 1 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 1 3.09 3.09L15.75 12l-2.847.813a4.5 4.5 0 0 1-3.09 3.091Z"/>
-                    <path d="M18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456Z"/>
-                    <path d="M16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 0 0-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 0 0 1.423-1.423L16.5 15.75l.394 1.183a2.25 2.25 0 0 0 1.423 1.423L19.5 18.75l-1.183.394a2.25 2.25 0 0 0-1.423 1.423Z"/>
-                </svg>
-                <!-- Down arrow shown when chat is open -->
-                <svg class="close-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <polyline points="6 9 12 15 18 9"></polyline>
-                </svg>
-            </div>
-            <div class="pulse-ring"></div>
-            <div class="pulse-ring-2"></div>
-        </button>
+      </article>
 
-        <!-- Chat Window -->
-        <div class="chat-popup" id="chatPopup">
-            <div class="chat-header">
-                <div class="chat-avatar">
-                    <div class="avatar-inner">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.832-1.438A9.96 9.96 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/>
-                            <circle cx="9" cy="9" r="1"/>
-                            <circle cx="15" cy="9" r="1"/>
-                            <path d="M8 13a8 8 0 008 0"/>
-                        </svg>
-                    </div>
-                    <div class="status-indicator online"></div>
-                </div>
-                <div class="chat-info">
-                    <h3>DevOps AI Assistant</h3>
-                    <p class="status-text">
-                        <span class="typing-indicator">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </span>
-                        Online • Ready to help
-                    </p>
-                </div>
-                <button class="close-chat" id="closeChat">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <line x1="18" y1="6" x2="6" y2="18"></line>
-                        <line x1="6" y1="6" x2="18" y2="18"></line>
-                    </svg>
-                </button>
-            </div>
-
-            <div class="chat-messages" id="chatMessages">
-                <div class="welcome-message">
-                    <div class="bot-avatar">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.832-1.438A9.96 9.96 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/>
-                            <circle cx="9" cy="9" r="1"/>
-                            <circle cx="15" cy="9" r="1"/>
-                            <path d="M8 13a8 8 0 008 0"/>
-                        </svg>
-                    </div>
-                    <div class="message-content">
-                        <p>👋 Hi! I'm Puneeth's AI assistant. I can help you learn about his DevOps expertise, certifications, and professional experience.</p>
-                        <div class="quick-suggestions">
-                            <button class="suggestion-chip" data-text="Tell me about DevOps skills">DevOps Skills</button>
-                            <button class="suggestion-chip" data-text="What certifications does Puneeth have?">Certifications</button>
-                            <button class="suggestion-chip" data-text="Show me cloud experience">Cloud Experience</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="chat-input-container">
-                <div class="input-wrapper">
-                    <textarea id="userMessage" placeholder="Ask about DevOps, cloud, automation..." rows="2"></textarea>
-                    <button class="send-btn" id="sendMessage">
-                        <svg class="send-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <line x1="22" y1="2" x2="11" y2="13"></line>
-                            <polygon points="22,2 15,22 11,13 2,9 22,2"></polygon>
-                        </svg>
-                    </button>
-                </div>                <div class="input-footer">
-                    <!-- Powered by text removed -->
-                </div>
-            </div>
+      <article class="release release--past" data-reveal>
+        <div class="release__aside">
+          <span class="release__tag">release/2015.06</span>
+          <h3 class="release__co">Accenture</h3>
+          <p class="release__period">Jun 2015 → Sep 2025 · 10y 4m</p>
         </div>
-    </div>    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="req/js/material-3.js"></script>
-    <script src="req/js/chatbot-fix.js"></script>
-    <script>
-    // ===== Mobile Nav Toggle & Active Link Highlight =====
-    (function(){
-      const navToggle = document.getElementById('navToggle');
-      const navMenu = document.getElementById('navMenu');
-      const navLinks = document.querySelectorAll('.nav-menu .nav-link');
+        <div class="release__main">
+          <h4 class="release__role">DevOps Engineer</h4>
+          <p class="release__sum">
+            Led DevOps implementations for enterprise clients: <span class="hl">cloud migration,
+            infrastructure automation and CI/CD pipelines</span> across Dynamics 365 CE and
+            Power Platform estates. Drove transformation initiatives that cut operational
+            overhead and raised system reliability.
+          </p>
+          <div class="release__chips" data-stagger>
+            <span class="kchip"><span class="d"></span>CI/CD pipelines</span>
+            <span class="kchip"><span class="d"></span>Cloud migration</span>
+            <span class="kchip"><span class="d"></span>Automation</span>
+            <span class="kchip"><span class="d"></span>Monitoring</span>
+            <span class="kchip"><span class="d"></span>IaC</span>
+            <span class="kchip"><span class="d"></span>Team leadership</span>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
 
-      if (navToggle && navMenu){
-        navToggle.addEventListener('click', function(){
-          navMenu.classList.toggle('active');
-        });
+<!-- ═══ 03 · Stack — spec sheet ═══ -->
+<section class="section" id="stack">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow" data-reveal><span class="idx">03</span> — cat stack.yaml</span>
+      <h2 data-reveal>The toolchain, declared.</h2>
+    </div>
 
-        // Close menu on link click (mobile)
-        navLinks.forEach(l=>l.addEventListener('click', ()=>{
-          navMenu.classList.remove('active');
-        }));
-      }
+    <div class="stack-stage" data-reveal>
+      <div class="stack-stage__copy">
+        <span class="stack-stage__label">production toolkit</span>
+        <p>Cloud, pipelines, observability, security and automation grouped like a real delivery system, not a badge wall.</p>
+      </div>
 
-      // Scroll spy / active link
-      const linkMap = new Map();
-      navLinks.forEach(link=>{
-        const id = link.getAttribute('href');
-        if (id && id.startsWith('#')){
-          const section = document.querySelector(id);
-          if(section) linkMap.set(section, link);
-        }
-      });
+      <div class="stack-stage__surface">
+        <figure class="spec spec--peek">
+          <figcaption>
+            <span class="d"></span>
+            <span class="path">infra/</span>stack.yaml
+            <span class="path">· tracked · drift checked</span>
+            <span class="spec__hint">hover a card ↓</span>
+          </figcaption>
+          <span class="spec__scan" aria-hidden="true"></span>
+          <div class="spec__mask">
+            <pre data-stagger><span class="ln"><span class="no">1</span><span><span class="k">stack</span><span class="p">:</span></span></span><span class="ln"><span class="no">2</span><span>  <span class="k">cloud</span><span class="p">:</span>          <span class="p">[</span><span class="v">aws</span><span class="p">,</span> <span class="v">azure</span><span class="p">]</span></span></span><span class="ln"><span class="no">3</span><span>  <span class="k">ci_cd</span><span class="p">:</span>          <span class="p">[</span><span class="v">azure-devops</span><span class="p">,</span> <span class="v">github-actions</span><span class="p">,</span> <span class="v">jenkins</span><span class="p">,</span> <span class="v">harness</span><span class="p">]</span></span></span><span class="ln"><span class="no">4</span><span>  <span class="k">containers</span><span class="p">:</span>     <span class="p">[</span><span class="v">docker</span><span class="p">,</span> <span class="v">kubernetes</span><span class="p">,</span> <span class="v">helm</span><span class="p">]</span></span></span><span class="ln"><span class="no">5</span><span>  <span class="k">iac</span><span class="p">:</span>            <span class="p">[</span><span class="v">terraform</span><span class="p">,</span> <span class="v">arm</span><span class="p">,</span> <span class="v">cloudformation</span><span class="p">,</span> <span class="v">ansible</span><span class="p">]</span></span></span><span class="ln"><span class="no">6</span><span>  <span class="k">observability</span><span class="p">:</span>  <span class="p">[</span><span class="v">splunk</span><span class="p">,</span> <span class="v">prometheus</span><span class="p">,</span> <span class="v">grafana</span><span class="p">]</span></span></span><span class="ln"><span class="no">7</span><span>  <span class="k">platforms</span><span class="p">:</span>      <span class="p">[</span><span class="v">dynamics-365</span><span class="p">,</span> <span class="v">power-platform</span><span class="p">,</span> <span class="v">mulesoft</span><span class="p">]</span></span></span><span class="ln"><span class="no">8</span><span>  <span class="k">scripting</span><span class="p">:</span>      <span class="p">[</span><span class="v">powershell</span><span class="p">,</span> <span class="v">bash</span><span class="p">,</span> <span class="v">python</span><span class="p">,</span> <span class="v">yaml</span><span class="p">]</span></span></span><span class="ln"><span class="no">9</span><span>  <span class="k">security</span><span class="p">:</span>       <span class="p">[</span><span class="v">owasp</span><span class="p">,</span> <span class="v">snyk</span><span class="p">,</span> <span class="v">vault</span><span class="p">,</span> <span class="v">sonarqube</span><span class="p">]</span></span></span><span class="ln"><span class="no">10</span><span>  <span class="k">data</span><span class="p">:</span>           <span class="p">[</span><span class="v">postgresql</span><span class="p">,</span> <span class="v">sql-server</span><span class="p">,</span> <span class="v">mongodb</span><span class="p">,</span> <span class="v">redis</span><span class="p">]</span></span></span><span class="ln"><span class="no">11</span><span></span></span><span class="ln"><span class="no">12</span><span><span class="k">mode</span><span class="p">:</span> <span class="v">automate_everything</span>  <span class="c"># 85% manual toil removed</span><span class="cursor-line"></span></span></span></pre>
+          </div>
+        </figure>
 
-      const setActive = (link)=>{
-        navLinks.forEach(l=>l.classList.remove('active'));
-        if (link) link.classList.add('active');
-      };
+        <div class="stack-cards" data-stagger>
+          <article class="stack-card" data-keys="ci_cd,iac">
+            <span class="stack-card__k">ship</span>
+            <strong>CI/CD</strong>
+            <p>Azure DevOps, GitHub Actions, Jenkins, Harness</p>
+          </article>
+          <article class="stack-card" data-keys="cloud,containers">
+            <span class="stack-card__k">run</span>
+            <strong>Cloud &amp; Containers</strong>
+            <p>AWS, Azure, Docker, Kubernetes, Helm</p>
+          </article>
+          <article class="stack-card" data-keys="security,observability">
+            <span class="stack-card__k">guard</span>
+            <strong>Security &amp; Observability</strong>
+            <p>OWASP, Snyk, Vault, SonarQube, Splunk, Grafana</p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-      // Highlight on click (fallback)
-      navLinks.forEach(l=>l.addEventListener('click',()=>setActive(l)));
+<!-- ═══ 04 · Credentials ═══ -->
+<section class="section" id="credentials">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow" data-reveal><span class="idx">04</span> — credentials --verified</span>
+      <h2 data-reveal>Proof, not promises.</h2>
+    </div>
 
-      // IntersectionObserver for sections
-      const obs = new IntersectionObserver((entries)=>{
-        entries.forEach(entry=>{
-          if(entry.isIntersecting){
-            const link = linkMap.get(entry.target);
-            if(link) setActive(link);
-          }
-        });
-      },{ rootMargin: "-40% 0px -50% 0px", threshold: [0, 0.25, 0.5, 0.75, 1] });
+    <div class="credgroup">
+      <div class="credgroup__label" data-reveal>certifications · 7 · all verifiable</div>
+      <div data-stagger>
+        <a class="crow" href="https://learn.microsoft.com/api/credentials/share/en-us/PuneethAradhya-6002/ED2CB021D00396F2?sharingId" target="_blank" rel="noopener" data-cursor="verify">
+          <span class="crow__issuer">Microsoft</span>
+          <span class="crow__name">DevOps Engineer Expert</span>
+          <span class="crow__dates">Jun 2025 → Jun 2027</span>
+          <span class="crow__go">verify <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></span>
+        </a>
+        <a class="crow" href="https://learn.microsoft.com/api/credentials/share/en-us/PuneethAradhya-6002/BB5EE1E1108B674E?sharingId" target="_blank" rel="noopener" data-cursor="verify">
+          <span class="crow__issuer">Microsoft</span>
+          <span class="crow__name">Azure Developer Associate</span>
+          <span class="crow__dates">Jun 2025 → Jun 2027</span>
+          <span class="crow__go">verify <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></span>
+        </a>
+        <a class="crow" href="https://www.credly.com/badges/091dfc79-d02a-4817-aa98-5690bf2738ac/linked_in_profile" target="_blank" rel="noopener" data-cursor="verify">
+          <span class="crow__issuer">Harness</span>
+          <span class="crow__name">Continuous Delivery &amp; GitOps Developer</span>
+          <span class="crow__dates">Jun 2025</span>
+          <span class="crow__go">verify <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></span>
+        </a>
+        <a class="crow" href="https://www.credly.com/badges/10395d56-1daf-4bf1-b781-26445abe637e/linked_in_profile" target="_blank" rel="noopener" data-cursor="verify">
+          <span class="crow__issuer">GitHub</span>
+          <span class="crow__name">GitHub Copilot</span>
+          <span class="crow__dates">Jun 2025 → Jun 2028</span>
+          <span class="crow__go">verify <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></span>
+        </a>
+        <a class="crow" href="https://www.credly.com/badges/84d92406-9ed6-46bf-b4e0-f07a10deb88d/linked_in_profile" target="_blank" rel="noopener" data-cursor="verify">
+          <span class="crow__issuer">GitHub</span>
+          <span class="crow__name">GitHub Foundations</span>
+          <span class="crow__dates">Jun 2025 → Jun 2028</span>
+          <span class="crow__go">verify <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></span>
+        </a>
+        <a class="crow" href="https://graphacademy.neo4j.com/c/d453634b-d0a8-4a65-aecd-596ea13e7fce/" target="_blank" rel="noopener" data-cursor="verify">
+          <span class="crow__issuer">Neo4j</span>
+          <span class="crow__name">Neo4j Certified Professional</span>
+          <span class="crow__dates">Jun 2025</span>
+          <span class="crow__go">verify <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></span>
+        </a>
+        <a class="crow" href="https://www.credly.com/badges/ba770513-e7ee-424c-8fbf-b5b1f257fdaf/linked_in_profile" target="_blank" rel="noopener" data-cursor="verify">
+          <span class="crow__issuer">Microsoft</span>
+          <span class="crow__name">Azure Fundamentals</span>
+          <span class="crow__dates">Aug 2020</span>
+          <span class="crow__go">verify <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></span>
+        </a>
+      </div>
+    </div>
 
-      linkMap.forEach((_, section)=>obs.observe(section));
-    })();
-    </script>
-    <script>
-(function(){
-  const launcher = document.getElementById('launchChatBtn');
-  if(launcher){
-    launcher.addEventListener('click', function(e){
-      e.preventDefault();
-      const popup = document.getElementById('chatPopup');
-      const chatBtn = document.getElementById('chatBtn');
-      if(popup && chatBtn){
-        popup.classList.add('active');
-        chatBtn.classList.add('active');
-      }
-    });
-  }
-})();
-</script>
+    <div class="credgroup">
+      <div class="credgroup__label" data-reveal>recognition</div>
+      <div class="awards3" data-stagger>
+        <article class="aw">
+          <div class="aw__year">2020</div>
+          <h3 class="aw__t">Accenture Celebrates Excellence</h3>
+          <span class="aw__tag">individual award</span>
+          <p class="aw__d">For automation initiatives that improved client deployments and cut manual intervention by 85%.</p>
+        </article>
+        <article class="aw">
+          <div class="aw__year">2021</div>
+          <h3 class="aw__t">pinNAcle Collaborator Award</h3>
+          <span class="aw__tag">collaboration</span>
+          <p class="aw__d">For outstanding cross-functional teamwork implementing DevOps solutions across projects.</p>
+        </article>
+        <article class="aw">
+          <div class="aw__year">2023</div>
+          <h3 class="aw__t">Shared Success Catalyst</h3>
+          <span class="aw__tag">innovation</span>
+          <p class="aw__d">For a knowledge-sharing platform that accelerated DevOps adoption across regions.</p>
+        </article>
+      </div>
+    </div>
+
+    <div class="credgroup" style="margin-bottom:0">
+      <div class="credgroup__label" data-reveal>education</div>
+      <div class="edu" data-reveal>
+        <span class="edu__ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5zM6 12v5c0 1 2.7 2.5 6 2.5s6-1.5 6-2.5v-5M22 10v6"/></svg>
+        </span>
+        <div>
+          <div class="edu__deg">Bachelor of Engineering</div>
+          <div class="edu__field">Electrical &amp; Electronics Engineering</div>
+          <div class="edu__school">Sri Jayachamarajendra College of Engineering, Mysore</div>
+        </div>
+        <span class="edu__years">2011 → 2015</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 05 · Contact ═══ -->
+<section class="section contact" id="contact">
+  <div class="container">
+    <span class="eyebrow" data-reveal><span class="idx">05</span> — ping puneeth</span>
+    <h2 class="contact__title" data-reveal>Ready to ship<br><span class="grad">something reliable?</span></h2>
+    <p class="contact__sub" data-reveal>One conversation about your pipelines, cloud estate or release pain, and where I can take it.</p>
+
+    <div class="contact__actions" data-reveal>
+      <a class="btn btn--primary btn--lg magnetic" href="mailto:aradhyapuneeth@gmail.com" data-cursor="send">
+        Email me
+        <svg class="btn__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <a class="btn btn--ghost btn--lg" href="https://www.linkedin.com/in/puneeth-aradhya" target="_blank" rel="noopener" data-cursor="open">
+        <svg class="btn__ico" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13M7.12 20.45H3.56V9h3.56z"/></svg>
+        LinkedIn
+      </a>
+    </div>
+
+    <div data-reveal>
+      <button class="copyline" id="copyEmail" data-copy="aradhyapuneeth@gmail.com" data-cursor="copy" type="button" aria-live="polite">
+        <span class="p">$</span>
+        <span class="addr">echo aradhyapuneeth@gmail.com | clip</span>
+        <span class="ok">✓ copied to clipboard</span>
+      </button>
+    </div>
+
+    <div class="contact__meta" data-reveal style="margin-top:2.2rem">
+      <span>base: Mysuru, Karnataka, IN</span>
+      <a href="https://www.google.com/maps?q=Mysuru,Karnataka,India" target="_blank" rel="noopener" data-cursor="map">12.2958° N · 76.6394° E ↗</a>
+      <span>tz: IST · UTC+05:30</span>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ═══ Footer ═══ -->
+<footer class="site-footer">
+  <div class="container footer__row">
+    <a class="footer__brand" href="#hero" data-cursor="top">
+      <span class="brand__mark">PA</span> Puneeth Aradhya
+    </a>
+    <span class="footer__mono">© 2026 · deployed from Mysuru · status: <span class="text-accent">operational</span></span>
+    <div class="footer__links">
+      <a href="https://www.linkedin.com/in/puneeth-aradhya" target="_blank" rel="noopener" data-cursor="open">LinkedIn</a>
+      <a href="mailto:aradhyapuneeth@gmail.com" data-cursor="send">Email</a>
+      <a href="#hero" data-cursor="top">Back to top ↑</a>
+    </div>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js" defer></script>
+<script src="req/js/preloader.js" defer></script>
+<script src="req/js/main.js" defer></script>
+<script src="req/js/cursor.js" defer></script>
 </body>
 </html>
-

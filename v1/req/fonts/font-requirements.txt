@@ -1,0 +1,40 @@
+Font Requirements for Portfolio Website
+=====================================
+
+You need to download the following font files and place them in this directory:
+d:\My_Space\Websites\Anna\pf\exp2\v2\req\fonts\
+
+Required Font Files:
+===================
+
+Berkeley Mono:
+- BerkeleyMono-Bold.woff2
+- BerkeleyMono-Bold.woff
+- BerkeleyMono-Regular.woff2
+- BerkeleyMono-Regular.woff
+
+FK Grotesk:
+- FKGrotesk-Light.woff2
+- FKGrotesk-Light.woff
+- FKGrotesk-Regular.woff2
+- FKGrotesk-Regular.woff
+
+FK Grotesk Neue:
+- FKGroteskNeue-Light.woff2
+- FKGroteskNeue-Light.woff
+- FKGroteskNeue-Regular.woff2
+- FKGroteskNeue-Regular.woff
+- FKGroteskNeue-Medium.woff2
+- FKGroteskNeue-Medium.woff
+
+Font Usage in CSS:
+==================
+- Primary text: FK Grotesk Regular
+- Light text: FK Grotesk Light
+- Modern text: FK Grotesk Neue Regular
+- Light modern: FK Grotesk Neue Light
+- Medium weight: FK Grotesk Neue Medium
+- Code/monospace: Berkeley Mono Regular
+- Bold code: Berkeley Mono Bold
+
+Once you place these files in this directory, your custom fonts will be loaded properly.
