@@ -556,40 +556,80 @@ body.has-cursor .cursor.is-visible { opacity: 1; }
 .git { width: min(420px, 100%); height: auto; overflow: visible; }
 .git .g-line { fill: none; stroke-linecap: round; stroke-dasharray: 1; stroke-dashoffset: 1; }
 .git .g-main { stroke: var(--line-strong); stroke-width: 2; transition: stroke-dashoffset 1.3s var(--ease-in-out) 0.25s; }
-.git .g-branch { stroke: var(--accent); stroke-width: 2; filter: drop-shadow(0 0 6px var(--accent-a40)); transition: stroke-dashoffset 1.5s var(--ease-in-out) 0.85s; }
+.git .g-branch { stroke: var(--accent); stroke-width: 2; filter: drop-shadow(0 0 6px var(--accent-a40)); transition: stroke-dashoffset 1.5s var(--ease-in-out) 0.85s, filter 0.6s var(--ease-out); }
 .hero.is-in .git .g-line { stroke-dashoffset: 0; }
 
-.git .g-c { fill: var(--bg-2); stroke-width: 2; transform-box: fill-box; transform-origin: center; transform: scale(0); transition: transform 0.5s var(--ease-spring); }
+/* entrance delay rides --gd/--gt so hover effects (r, filter,
+   stroke, fill — separate transitions) respond instantly */
+.git .g-c {
+  fill: var(--bg-2); stroke-width: 2; transform-box: fill-box; transform-origin: center; transform: scale(0);
+  transition: transform 0.5s var(--ease-spring) var(--gd, 0s), r 0.32s var(--ease-spring),
+              filter 0.3s var(--ease-out), stroke 0.3s var(--ease-out), stroke-width 0.3s var(--ease-out);
+}
 .git .g-c--main { stroke: var(--ink-muted); }
 .git .g-c--acc { stroke: var(--accent); }
 .hero.is-in .git .g-c { transform: scale(1); }
-.hero.is-in .git .g-c.d1 { transition-delay: 0.5s; }
-.hero.is-in .git .g-c.d2 { transition-delay: 0.95s; }
-.hero.is-in .git .g-c.d3 { transition-delay: 1.35s; }
-.hero.is-in .git .g-c.d4 { transition-delay: 1.7s; }
-.hero.is-in .git .g-c.d5 { transition-delay: 2.05s; }
+.git .g-c.d1 { --gd: 0.5s; }
+.git .g-c.d2 { --gd: 0.95s; }
+.git .g-c.d3 { --gd: 1.35s; }
+.git .g-c.d4 { --gd: 1.7s; }
+.git .g-c.d5 { --gd: 2.05s; }
 
-.git .g-t { font-family: var(--font-mono); font-size: 11.5px; letter-spacing: 0.02em; fill: var(--ink-muted); opacity: 0; transform: translateY(4px); transition: opacity 0.5s var(--ease-out), transform 0.5s var(--ease-out); }
+.git .g-t {
+  font-family: var(--font-mono); font-size: 11.5px; letter-spacing: 0.02em; fill: var(--ink-muted);
+  opacity: 0; transform: translateY(4px);
+  transition: opacity 0.5s var(--ease-out) var(--gt, 0s), transform 0.5s var(--ease-out) var(--gt, 0s),
+              fill 0.25s var(--ease-out);
+}
 .git .g-t--acc { fill: var(--accent); }
 .git .g-t--dim { fill: var(--ink-faint); }
 .hero.is-in .git .g-t { opacity: 1; transform: none; }
-.hero.is-in .git .g-t.d1 { transition-delay: 0.62s; }
-.hero.is-in .git .g-t.d2 { transition-delay: 1.05s; }
-.hero.is-in .git .g-t.d3 { transition-delay: 1.45s; }
-.hero.is-in .git .g-t.d4 { transition-delay: 1.8s; }
-.hero.is-in .git .g-t.d5 { transition-delay: 2.15s; }
+.git .g-t.d1 { --gt: 0.62s; }
+.git .g-t.d2 { --gt: 1.05s; }
+.git .g-t.d3 { --gt: 1.45s; }
+.git .g-t.d4 { --gt: 1.8s; }
+.git .g-t.d5 { --gt: 2.15s; }
 
 .git .g-tag { opacity: 0; transform: translateY(6px); transform-box: fill-box; transition: opacity 0.55s var(--ease-out) 2.35s, transform 0.55s var(--ease-spring) 2.35s; }
 .hero.is-in .git .g-tag { opacity: 1; transform: none; }
-.git .g-tag rect { fill: var(--accent); }
+.git .g-tag rect { fill: var(--accent); transition: fill 0.25s var(--ease-out), filter 0.3s var(--ease-out); }
 .git .g-tag text { font-family: var(--font-mono); font-size: 11.5px; font-weight: 600; letter-spacing: 0.04em; fill: var(--accent-ink); }
 .git .g-ring { fill: none; stroke: var(--accent); stroke-width: 1.5; transform-box: fill-box; transform-origin: center; opacity: 0; }
 .hero.is-in .git .g-ring { animation: gring 2.6s var(--ease-out) 2.5s infinite; }
 @keyframes gring { 0% { transform: scale(0.5); opacity: 0.9; } 70%, 100% { transform: scale(1.9); opacity: 0; } }
 
+/* ── 11b. Git graph — micro-interactions ────────────────────── *
+ * Hover a commit: the node blooms, its label brightens, and the
+ * custom cursor reads out the commit hash (data-cursor). */
+.git .g-hit { fill: transparent; pointer-events: all; }
+.git .g-commit:hover .g-c { r: 10.5; stroke-width: 2.5; filter: drop-shadow(0 0 9px var(--accent-a40)); }
+.git .g-commit:hover .g-c--main { stroke: var(--accent); }
+.git .g-commit:hover .g-t { fill: var(--ink); }
+.git .g-commit:hover .g-t--acc { fill: var(--accent-bright); }
+.git .g-commit:hover .g-t--dim { fill: var(--ink-soft); }
+/* the whole graph warms up while you're in it */
+.hero__graph:hover .g-branch { filter: drop-shadow(0 0 12px var(--accent-a40)); }
+/* HEAD: the release pill lifts off on hover */
+.git .g-tag__in { transition: transform 0.35s var(--ease-spring); }
+.git .g-head:hover .g-tag__in { transform: translateY(-3px); }
+.git .g-head:hover .g-tag rect { fill: var(--accent-bright); filter: drop-shadow(0 0 12px var(--accent-a40)); }
+/* deploy signal — a pulse rides the branch, checkout → merge */
+.git .g-flow {
+  fill: none; stroke: var(--accent-bright); stroke-width: 2.5; stroke-linecap: round;
+  stroke-dasharray: 0.085 1; stroke-dashoffset: 0.085; opacity: 0;
+  filter: drop-shadow(0 0 7px var(--accent));
+}
+.hero.is-in .git .g-flow { animation: gitflow 7.5s linear 4.2s infinite; }
+@keyframes gitflow {
+  0%        { stroke-dashoffset: 0.085; opacity: 0; }
+  4%        { opacity: 0.95; }
+  30%       { opacity: 0.95; }
+  38%, 100% { stroke-dashoffset: -1; opacity: 0; }
+}
+
 /* ── 12. Marquee ────────────────────────────────────────────── */
 .marquee { position: relative; overflow: hidden; border-block: 1px solid var(--line); padding-block: 1.35rem; background: var(--surface); }
-.marquee__track { display: flex; gap: 3rem; width: max-content; animation: marquee 40s linear infinite; }
+.marquee__track { display: flex; gap: 3rem; width: max-content; animation: marquee 85s linear infinite; }
 .marquee:hover .marquee__track { animation-play-state: paused; }
 .marquee__item { display: inline-flex; align-items: center; gap: 0.7rem; color: var(--ink-muted); font-weight: 500; font-size: 1rem; letter-spacing: -0.01em; white-space: nowrap; transition: color var(--dur-2) var(--ease-out), transform var(--dur-2) var(--ease-out); }
 .marquee__item:hover { color: var(--ink); transform: translateY(-2px); }
@@ -770,6 +810,59 @@ body.has-cursor .cursor.is-visible { opacity: 1; }
 .kchip:hover { color: var(--accent); border-color: var(--accent-a20); transform: translateY(-2px); }
 .kchip .d { width: 5px; height: 5px; border-radius: 50%; background: var(--accent); opacity: 0.7; }
 
+/* selected outcomes — numbered stat strip, own room below the log */
+.impact-strip {
+  margin-top: clamp(4.5rem, 3rem + 5vw, 8rem);
+  border-top: 1px solid var(--line);
+  padding-top: clamp(2.2rem, 1.6rem + 2vw, 3.2rem);
+}
+.impact-strip .eyebrow { margin-bottom: 1.15rem; }
+.impact-title {
+  font-size: clamp(1.3rem, 1.05rem + 1vw, 1.8rem);
+  font-weight: 600; letter-spacing: -0.02em;
+  margin-bottom: 0.65rem;
+}
+.impact-sub {
+  color: var(--ink-muted); font-size: 0.95rem; max-width: 52ch;
+  margin-bottom: clamp(1.7rem, 1.2rem + 1.8vw, 2.6rem);
+}
+.impact-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  border-block: 1px solid var(--line);
+}
+.impact-stat {
+  position: relative;
+  padding: clamp(1.5rem, 1.1rem + 1.4vw, 2.1rem) 1.5rem clamp(1.4rem, 1rem + 1.3vw, 1.9rem);
+  border-right: 1px solid var(--line);
+  transition: background var(--dur-3) var(--ease-out);
+}
+.impact-stat:first-child { padding-left: 0; }
+.impact-stat:last-child { border-right: 0; padding-right: 0; }
+.impact-stat::before {
+  content: "";
+  position: absolute; left: 0; right: 0; top: -1px; height: 1px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+  opacity: 0; transform: translateX(-30%);
+  transition: opacity var(--dur-3) var(--ease-out), transform var(--dur-4) var(--ease-out);
+}
+.impact-stat:hover { background: var(--surface); }
+.impact-stat:hover::before { opacity: 1; transform: translateX(0); }
+.impact-stat__n {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: clamp(1.9rem, 1.2rem + 2.4vw, 3rem);
+  font-weight: 700; letter-spacing: -0.045em; line-height: 1;
+  font-variant-numeric: tabular-nums;
+  transition: text-shadow var(--dur-3) var(--ease-out);
+}
+.impact-stat__n span { color: var(--accent); font-size: 0.72em; font-weight: 600; margin-left: 0.05em; }
+.impact-stat:hover .impact-stat__n { text-shadow: 0 0 18px var(--accent-a40); }
+.impact-stat__l {
+  display: block; margin-top: 0.75rem; max-width: 17ch;
+  font-size: 0.84rem; line-height: 1.5; color: var(--ink-muted);
+}
+
 /* ── 18. Stack — clipped delivery surface ───────────────────── */
 .stack-stage {
   position: relative;
@@ -847,13 +940,14 @@ body.has-cursor .cursor.is-visible { opacity: 1; }
 .spec:hover::before { opacity: 1; transform: translateX(18%); }
 .spec figcaption {
   position: relative; z-index: 2;
-  display: flex; align-items: center; gap: 0.6rem; padding: 0.82rem 1.2rem;
+  display: flex; flex-wrap: wrap; align-items: center; gap: 0.3rem 0.6rem; padding: 0.82rem 1.2rem;
   border-bottom: 1px solid var(--line);
   font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.06em; color: var(--ink-muted);
   background: rgba(8,9,11,0.9);
 }
 .spec figcaption .d { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 8px var(--accent); }
-.spec figcaption .path { color: var(--ink-faint); }
+/* each caption token wraps as a unit — never mid-phrase */
+.spec figcaption .path { color: var(--ink-faint); white-space: nowrap; }
 .spec__hint {
   margin-left: auto;
   color: var(--ink-faint);
@@ -1091,17 +1185,16 @@ body.has-cursor .cursor.is-visible { opacity: 1; }
   .spec__hint { display: none; }
 }
 @media (max-width: 780px) {
-  /* the yaml scrolls sideways here: fade the cut edge so it reads
-     as scrollable, not broken; keep the scrollbar slim */
-  .spec::after {
-    content: ""; position: absolute; top: 0; bottom: 0; right: 0; width: 42px;
-    z-index: 1; pointer-events: none;
-    background: linear-gradient(270deg, rgba(8,9,11,0.92), transparent);
-  }
-  .spec__mask { scrollbar-width: thin; }
-  .spec__mask::-webkit-scrollbar { height: 7px; }
-  .spec__mask::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.14); border-radius: 99px; }
-  .spec__mask::-webkit-scrollbar-track { background: transparent; }
+  /* no sideways scroll on phones: drop the fixed column width,
+     collapse the alignment spaces, and wrap value lists under
+     their key (flex keeps the wrap clear of the line numbers) */
+  .spec pre { min-width: 0; }
+  .spec .ln { white-space: normal; }
+  .spec .ln > span:not(.no) { min-width: 0; overflow-wrap: anywhere; }
+  /* nested keys (yaml lines 2–11) keep one step of indent */
+  .spec .ln:nth-child(n+2):nth-child(-n+11) > span:not(.no) { padding-left: 0.9em; }
+  /* wrap between tokens, never inside one (no "github-/actions") */
+  .spec .ln .v, .spec .ln .k { white-space: nowrap; }
 }
 @media (max-width: 900px) {
   .release { grid-template-columns: 1fr; gap: 0.9rem; }
@@ -1112,6 +1205,11 @@ body.has-cursor .cursor.is-visible { opacity: 1; }
   .principle { min-height: 0; border-right: 0; border-bottom: 1px solid var(--line); }
   .principle:last-child { border-bottom: 0; }
   .principle h3 { margin-top: 1.4rem; }
+  .impact-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .impact-stat { padding-inline: 1.2rem; }
+  .impact-stat:nth-child(odd) { padding-left: 0; }
+  .impact-stat:nth-child(even) { border-right: 0; padding-right: 0; }
+  .impact-stat:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
   .awards3 { grid-template-columns: 1fr; }
   .crow { grid-template-columns: 1fr auto; grid-template-areas: "issuer dates" "name go"; row-gap: 0.45rem; }
   .crow__issuer { grid-area: issuer; }
@@ -1130,6 +1228,7 @@ body.has-cursor .cursor.is-visible { opacity: 1; }
   .git .g-line { stroke-dashoffset: 0 !important; }
   .git .g-c { transform: scale(1) !important; }
   .git .g-t, .git .g-tag { opacity: 1 !important; transform: none !important; }
+  .git .g-flow { animation: none !important; opacity: 0 !important; }
   .marquee__track { animation: none !important; }
   .cursor { display: none !important; }
 }
@@ -1138,7 +1237,10 @@ body.has-cursor .cursor.is-visible { opacity: 1; }
 /* ── 16. Responsive ─────────────────────────────────────────── */
 @media (max-width: 1080px) {
   .hero__grid { grid-template-columns: 1fr; }
-  .hero__graph { display: none; }
+  /* graph joins the flow under the intro — smaller, centered,
+     with room below so it clears the scroll cue */
+  .hero__graph { margin-top: 1.5rem; margin-bottom: 2.5rem; }
+  .git { width: min(340px, 86vw); }
   .hero__title .line { white-space: normal; }
   .nav__status { display: none; }
 }
@@ -1152,6 +1254,9 @@ body.has-cursor .cursor.is-visible { opacity: 1; }
     transition: opacity var(--dur-2) var(--ease-out), transform var(--dur-3) var(--ease-out);
   }
   .nav { position: relative; }
+  /* the links leave the flex row here (absolute dropdown), taking the
+     auto-margin spacer with them — re-anchor the controls to the edge */
+  .nav__right { margin-left: auto; }
   .nav.is-open .nav__links { opacity: 1; transform: none; pointer-events: auto; }
   .nav__link { padding: 0.75rem 0.9rem; font-size: 0.95rem; }
   .nav__link.is-active::before { display: none; }
@@ -1165,39 +1270,14 @@ body.has-cursor .cursor.is-visible { opacity: 1; }
   .cursor { display: none; }
 }
 @media (max-width: 560px) {
-  .container { padding-inline: 1rem; }
-  .section { padding-block: clamp(3.5rem, 2.8rem + 5vw, 5rem); }
   .nav__cta { display: none; }
   .brand__name .role { display: none; }
-  .site-header { top: 0; }
   .pipeline__track { left: 10%; right: 10%; }
   .stage__label { font-size: 0.58rem; }
-  .hero { min-height: auto; padding-top: 5.2rem; padding-bottom: 2.75rem; }
-  .hero__eyebrow { gap: 0.4rem; line-height: 1.45; }
-  .hero__title .line { font-size: clamp(2.6rem, 13vw, 4rem); }
-  .hero__actions { gap: 0.65rem; }
-  .hero__actions .btn { width: 100%; }
-  .hero__actions .btn--ghost { justify-content: center; }
-  .status-strip { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.65rem 1rem; }
-  .stat { padding-block: 0.35rem; }
+  .hero__actions .btn { flex: 1; }
   .stat + .stat { border-left: 0; padding-left: 0; }
+  .status-strip { gap: 0 1.2rem; }
   .boot__cmd { font-size: 0.72rem; }
-  .about__grid { gap: 1.5rem; }
-  .idcard { max-width: none; }
-  .idcard__row { padding-inline: 0.95rem; font-size: 0.68rem; }
-  .stack-stage { gap: 1.1rem; padding-block: 1rem; }
-  .stack-stage__copy { padding-top: 0; }
-  .stack-stage__copy p { max-width: none; }
-  .stack-stage__surface { min-width: 0; }
-  .spec { border-radius: 16px; }
-  .spec figcaption { flex-wrap: wrap; gap: 0.3rem 0.5rem; padding: 0.78rem 1rem; }
-  .spec__hint { display: none; }
-  .spec__mask { overflow-x: auto; -webkit-overflow-scrolling: touch; }
-  .spec pre { min-width: 100%; font-size: 0.68rem; line-height: 1.75; }
-  .spec .ln { gap: 0.85rem; padding-inline: 1rem; }
-  .stack-cards { grid-template-columns: 1fr; }
-  .stack-card { min-height: 0; padding: 0.95rem; }
-  .stack-card p { font-size: 0.78rem; }
-  .contact__actions .btn { width: 100%; }
-  .footer__links { gap: 0.95rem; flex-wrap: wrap; justify-content: center; }
+  .stack-stage { padding-block: 1rem; }
+  .spec pre { font-size: 0.72rem; }
 }

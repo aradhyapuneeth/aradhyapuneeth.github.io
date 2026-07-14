@@ -229,33 +229,53 @@
         </div>
       </div>
 
-      <!-- Git graph — a release, drawn live -->
+      <!-- Git graph — a release, drawn live · hover a commit for its hash -->
       <div class="hero__graph" aria-hidden="true">
         <svg class="git" viewBox="0 0 420 560" fill="none">
           <!-- lines -->
           <path class="g-line g-main"   d="M150 20 V 540" pathLength="1"/>
           <path class="g-line g-branch" d="M150 120 C 150 168, 300 156, 300 204 V 356 C 300 404, 150 392, 150 440" pathLength="1"/>
+          <!-- deploy signal — a pulse rides the branch every few seconds -->
+          <path class="g-flow" d="M150 120 C 150 168, 300 156, 300 204 V 356 C 300 404, 150 392, 150 440" pathLength="1"/>
 
-          <!-- commits -->
-          <circle class="g-c g-c--main d1" cx="150" cy="60"  r="7" />
-          <circle class="g-c g-c--acc  d2" cx="150" cy="120" r="7" />
-          <circle class="g-c g-c--acc  d3" cx="300" cy="240" r="7" />
-          <circle class="g-c g-c--acc  d4" cx="300" cy="320" r="7" />
-          <circle class="g-c g-c--acc  d5" cx="150" cy="440" r="7" />
-          <circle class="g-c g-c--acc  d5" cx="150" cy="505" r="8" />
-          <circle class="g-ring" cx="150" cy="505" r="9" />
+          <!-- commits — each group is a fat hover target; the cursor shows the hash -->
+          <g class="g-commit" data-cursor="c0ffee1">
+            <circle class="g-hit" cx="150" cy="60" r="22"/>
+            <circle class="g-c g-c--main d1" cx="150" cy="60"  r="7" />
+            <text class="g-t g-t--dim d1" x="130" y="64"  text-anchor="end">main</text>
+          </g>
+          <g class="g-commit" data-cursor="fea7c1a">
+            <circle class="g-hit" cx="150" cy="120" r="22"/>
+            <circle class="g-c g-c--acc  d2" cx="150" cy="120" r="7" />
+            <text class="g-t d2" x="130" y="124" text-anchor="end">checkout -b feat/ci</text>
+          </g>
+          <g class="g-commit" data-cursor="add5afe">
+            <circle class="g-hit" cx="300" cy="240" r="22"/>
+            <circle class="g-c g-c--acc  d3" cx="300" cy="240" r="7" />
+            <text class="g-t d3" x="320" y="244">+ pipeline.yml</text>
+          </g>
+          <g class="g-commit" data-cursor="5ecc0de">
+            <circle class="g-hit" cx="300" cy="320" r="22"/>
+            <circle class="g-c g-c--acc  d4" cx="300" cy="320" r="7" />
+            <text class="g-t g-t--acc d4" x="320" y="324">checks ✓ secure</text>
+          </g>
+          <g class="g-commit" data-cursor="decade00">
+            <circle class="g-hit" cx="150" cy="440" r="22"/>
+            <circle class="g-c g-c--acc  d5" cx="150" cy="440" r="7" />
+            <text class="g-t d5" x="130" y="444" text-anchor="end">merge → main</text>
+          </g>
 
-          <!-- labels -->
-          <text class="g-t g-t--dim d1" x="130" y="64"  text-anchor="end">main</text>
-          <text class="g-t d2" x="130" y="124" text-anchor="end">checkout -b feat/ci</text>
-          <text class="g-t d3" x="320" y="244">+ pipeline.yml</text>
-          <text class="g-t g-t--acc d4" x="320" y="324">checks ✓ secure</text>
-          <text class="g-t d5" x="130" y="444" text-anchor="end">merge → main</text>
-
-          <!-- release tag -->
-          <g class="g-tag">
-            <rect x="174" y="491" width="142" height="28" rx="14"/>
-            <text x="245" y="509" text-anchor="middle">v2.0 · deployed</text>
+          <!-- HEAD + release tag -->
+          <g class="g-commit g-head" data-cursor="HEAD → v2.0">
+            <circle class="g-hit" cx="150" cy="505" r="26"/>
+            <circle class="g-c g-c--acc  d5" cx="150" cy="505" r="8" />
+            <circle class="g-ring" cx="150" cy="505" r="9" />
+            <g class="g-tag">
+              <g class="g-tag__in">
+                <rect x="174" y="491" width="142" height="28" rx="14"/>
+                <text x="245" y="509" text-anchor="middle">v2.0 · deployed</text>
+              </g>
+            </g>
           </g>
         </svg>
       </div>
@@ -481,37 +501,39 @@
 
     </div>
 
-    <!-- Selected outcomes -->
+    <!-- Selected outcomes — numbered stat strip -->
 
     <div class="impact-strip" data-reveal>
 
       <span class="eyebrow">
-        <span class="idx">02a</span> — git shortlog --impact
+        <span class="idx">02a</span> — git diff --stat
       </span>
 
-      <h3 class="impact-title">Selected outcomes.</h3>
+      <h3 class="impact-title">The decade, diffed.</h3>
 
-      <div class="release__chips impact-chips" data-stagger>
+      <p class="impact-sub">Ten years of commits, squashed into four numbers.</p>
 
-        <span class="kchip impact-kpi">
-          <strong>400+</strong>
-          <span>Applications Supported</span>
-        </span>
+      <div class="impact-grid" data-stagger>
 
-        <span class="kchip impact-kpi">
-          <strong>120+</strong>
-          <span>Applications Migrated</span>
-        </span>
+        <article class="impact-stat">
+          <strong class="impact-stat__n">400<span>+</span></strong>
+          <span class="impact-stat__l">Applications supported</span>
+        </article>
 
-        <span class="kchip impact-kpi">
-          <strong>19%</strong>
-          <span>Infrastructure Footprint Reduced</span>
-        </span>
+        <article class="impact-stat">
+          <strong class="impact-stat__n">120<span>+</span></strong>
+          <span class="impact-stat__l">Applications migrated</span>
+        </article>
 
-        <span class="kchip impact-kpi">
-          <strong>10+</strong>
-          <span>Years in Enterprise Delivery</span>
-        </span>
+        <article class="impact-stat">
+          <strong class="impact-stat__n">19<span>%</span></strong>
+          <span class="impact-stat__l">Infrastructure footprint reduced</span>
+        </article>
+
+        <article class="impact-stat">
+          <strong class="impact-stat__n">10<span>+</span></strong>
+          <span class="impact-stat__l">Years in enterprise delivery</span>
+        </article>
 
       </div>
 
