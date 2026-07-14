@@ -75,7 +75,7 @@
     if (themeBtn) themeBtn.setAttribute('aria-label', t === 'light' ? 'Switch to dark theme' : 'Switch to light theme');
     window.dispatchEvent(new CustomEvent('themechange'));
   }
-  applyTheme(document.documentElement.getAttribute('data-theme') || 'dark', false);
+  applyTheme(document.documentElement.getAttribute('data-theme') || 'light', false);
   if (themeBtn) themeBtn.addEventListener('click', function () {
     var next = document.documentElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
     if (!reduce) {
@@ -85,14 +85,6 @@
     }
     applyTheme(next, true);
   });
-  try {
-    matchMedia('(prefers-color-scheme: light)').addEventListener('change', function (e) {
-      var stored = null;
-      try { stored = localStorage.getItem('theme'); } catch (err) {}
-      if (!stored) applyTheme(e.matches ? 'light' : 'dark', false);
-    });
-  } catch (e) {}
-
   /* ── Live clock (IST) ──────────────────────────────────────── */
   var clocks = $$('[data-clock]');
   if (clocks.length) {

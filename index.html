@@ -7,19 +7,23 @@
 <meta name="description"
 content="Senior DevOps Engineer specializing in Enterprise DevOps, CI/CD Architecture, Release Engineering, DevSecOps, Platform Modernization, and Developer Enablement. Building secure, automated delivery platforms that help teams ship with confidence.">
 <meta name="keywords"
-content="Puneeth Aradhya, Enterprise DevOps Engineer, DevOps Engineer, CI/CD Architecture, Release Engineering, DevSecOps, Platform Modernization, Azure DevOps, GitHub Actions, Jenkins, Developer Experience, Security Automation, Power Platform Build Tools, Dynamics 365 DevOps, GitHub, JFrog, Nexus, ServiceNow, Splunk">
+content="Puneeth Aradhya, Aradhya Puneeth, Aradhya, Puneeth, aradhyapuneeth, Puneeth Aradhya DevOps Engineer, Puneeth Aradhya Mysuru, Puneeth Aradhya portfolio, Puneeth Aradhya LinkedIn, Puneeth Aradhya GitHub, Puneeth Aradhya Devpost, Enterprise DevOps Engineer, DevOps Engineer, CI/CD Architecture, Release Engineering, DevSecOps, Platform Modernization, Azure DevOps, GitHub Actions, Jenkins, Developer Experience, Security Automation, Power Platform Build Tools, Dynamics 365 DevOps, GitHub, JFrog, Nexus, ServiceNow, Splunk">
 <meta name="author" content="Puneeth Aradhya">
+<!-- Co-Author -->
+<meta name="co-author:name" content="Aradhyapavan H S">
+<meta name="co-author:website" content="https://aradhyapavan.github.io/">
+<meta name="co-author:linkedin" content="https://linkedin.com/in/aradhya-pavan">
+<meta name="co-author:github" content="https://github.com/aradhyapavan">
 <meta name="robots" content="index, follow">
-<meta name="theme-color" content="#f7f8f5">
+<meta name="theme-color" content="#f2f5f2">
 <meta http-equiv="Cache-Control" content="max-age=86400, public">
 <script>
-/* Theme boot — runs before first paint so there is no flash. */
+/* Theme boot — runs before first paint so there is no flash.
+ * Light is the default; dark only when the visitor chose it. */
 (function () {
   var t = null;
   try { t = localStorage.getItem('theme'); } catch (e) {}
-  if (t !== 'light' && t !== 'dark') {
-    t = window.matchMedia && matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
-  }
+  if (t !== 'light' && t !== 'dark') t = 'light';
   document.documentElement.setAttribute('data-theme', t);
 })();
 </script>
@@ -30,11 +34,18 @@ content="Puneeth Aradhya, Enterprise DevOps Engineer, DevOps Engineer, CI/CD Arc
 <meta property="og:site_name" content="Puneeth Aradhya">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://aradhyapuneeth.github.io/req/img/profile.png">
+<meta property="og:image:alt" content="Puneeth Aradhya — Senior DevOps Engineer">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Puneeth Aradhya | DevOps Engineer">
 <meta name="twitter:description" content="DevOps Engineer specializing in cloud solutions, CI/CD pipelines, and automation">
 <meta name="twitter:image" content="https://aradhyapuneeth.github.io/req/img/profile.png">
+<meta name="twitter:image:alt" content="Puneeth Aradhya — Senior DevOps Engineer">
 <link rel="canonical" href="https://aradhyapuneeth.github.io">
+
+<!-- Verified profiles (rel=me identity + crawlable entity links) -->
+<link rel="me" href="https://www.linkedin.com/in/puneeth-aradhya">
+<link rel="me" href="https://github.com/aradhyapuneeth">
+<link rel="me" href="https://devpost.com/aradhyapuneeth">
 
 <link rel="icon" href="req/img/fav/favicon.svg?v=2" type="image/svg+xml">
 <link rel="icon" href="req/img/fav/favicon.ico?v=2" sizes="any">
@@ -70,15 +81,51 @@ content="Puneeth Aradhya, Enterprise DevOps Engineer, DevOps Engineer, CI/CD Arc
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Puneeth Aradhya",
-  "jobTitle": "Senior DevOps Engineer",
-  "url": "https://aradhyapuneeth.github.io",
-  "email": "mailto:aradhyapuneeth@gmail.com",
-  "image": "https://aradhyapuneeth.github.io/req/img/profile.png",
-  "address": { "@type": "PostalAddress", "addressLocality": "Mysuru", "addressRegion": "Karnataka", "addressCountry": "IN" },
-  "alumniOf": "Sri Jayachamarajendra College of Engineering",
-  "sameAs": ["https://www.linkedin.com/in/puneeth-aradhya"]
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://aradhyapuneeth.github.io/#website",
+      "url": "https://aradhyapuneeth.github.io/",
+      "name": "Puneeth Aradhya",
+      "alternateName": ["Aradhya Puneeth", "Puneeth Aradhya Portfolio"],
+      "publisher": { "@id": "https://aradhyapuneeth.github.io/#person" },
+      "inLanguage": "en"
+    },
+    {
+      "@type": "ProfilePage",
+      "@id": "https://aradhyapuneeth.github.io/#profilepage",
+      "url": "https://aradhyapuneeth.github.io/",
+      "name": "Puneeth Aradhya | Enterprise DevOps, DevSecOps & Release Engineering",
+      "isPartOf": { "@id": "https://aradhyapuneeth.github.io/#website" },
+      "mainEntity": { "@id": "https://aradhyapuneeth.github.io/#person" },
+      "inLanguage": "en"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://aradhyapuneeth.github.io/#person",
+      "name": "Puneeth Aradhya",
+      "alternateName": ["Aradhya Puneeth", "Puneeth", "Aradhya", "aradhyapuneeth"],
+      "givenName": "Puneeth",
+      "familyName": "Aradhya",
+      "jobTitle": "Senior DevOps Engineer",
+      "url": "https://aradhyapuneeth.github.io",
+      "email": "mailto:aradhyapuneeth@gmail.com",
+      "image": "https://aradhyapuneeth.github.io/req/img/profile.png",
+      "address": { "@type": "PostalAddress", "addressLocality": "Mysuru", "addressRegion": "Karnataka", "addressCountry": "IN" },
+      "alumniOf": "Sri Jayachamarajendra College of Engineering",
+      "worksFor": { "@type": "Organization", "name": "LTM" },
+      "knowsAbout": [
+        "Enterprise DevOps", "DevSecOps", "CI/CD Architecture", "Release Engineering",
+        "Platform Modernization", "Azure DevOps", "GitHub Actions", "Jenkins",
+        "Security Automation", "Developer Experience", "Microsoft Azure", "AWS"
+      ],
+      "sameAs": [
+        "https://www.linkedin.com/in/puneeth-aradhya",
+        "https://github.com/aradhyapuneeth",
+        "https://devpost.com/aradhyapuneeth"
+      ]
+    }
+  ]
 }
 </script>
 </head>
@@ -359,7 +406,7 @@ content="Puneeth Aradhya, Enterprise DevOps Engineer, DevOps Engineer, CI/CD Arc
           <span class="on">verified</span>
         </div>
         <div class="idcard__photo">
-          <img src="req/img/profile-canyon.png" alt="Puneeth Aradhya" width="900" height="920" loading="lazy">
+          <img src="req/img/profile-canyon.webp" alt="Puneeth Aradhya" width="1254" height="1254" loading="lazy">
           <span class="idcard__scan"></span>
         </div>
         <div class="idcard__meta">
@@ -738,6 +785,8 @@ content="Puneeth Aradhya, Enterprise DevOps Engineer, DevOps Engineer, CI/CD Arc
     <span class="footer__mono">© 2026 · deployed from Mysuru · status: <span class="text-accent">operational</span></span>
     <div class="footer__links">
       <a href="https://www.linkedin.com/in/puneeth-aradhya" target="_blank" rel="noopener" data-cursor="open">LinkedIn</a>
+      <a href="https://github.com/aradhyapuneeth" target="_blank" rel="noopener" data-cursor="open">GitHub</a>
+      <a href="https://devpost.com/aradhyapuneeth" target="_blank" rel="noopener" data-cursor="open">Devpost</a>
       <a href="mailto:aradhyapuneeth@gmail.com" data-cursor="send">Email</a>
       <a href="#hero" data-cursor="top">Back to top ↑</a>
     </div>
