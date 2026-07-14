@@ -175,7 +175,7 @@
   var decoded = false;
   function heroIn() {
     if (decoded) return; decoded = true;
-    var hero = $('#hero');
+    var hero = $('#hero') || $('.hero') || $('#home');
     if (hero) hero.classList.add('is-in');
     runDecodes();
   }
