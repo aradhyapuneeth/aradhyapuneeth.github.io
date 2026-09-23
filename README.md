@@ -56,7 +56,7 @@ After that, the career is a `git log`, the numbers are a `git diff --stat`, the 
 | `02` | `git log --career` | Roles as release tags, from `release/2025.12 — HEAD` back to `release/2015.06` |
 | `02a` | `git diff --stat` | The decade in numbers: 400+ apps supported, 120+ migrated, 19% infra footprint cut |
 | `03` | `cat stack.yaml` | The toolchain as annotated YAML, cross-linked to three cards |
-| `04` | `ls -la credentials/` | Seven certifications with live verify links, three awards, and education |
+| `04` | `ls -la credentials` | Seven certifications with live verify links, three awards, and education |
 | `05` | `ping puneeth` | Email and LinkedIn CTAs, plus a terminal line that copies the address |
 
 ## 01 · Details worth zooming into
